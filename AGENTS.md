@@ -37,6 +37,7 @@ For each target app:
 Use whatever image generation / edit capability you have in this environment (Cursor image tools, etc.). Prefer **edit/restyle of the original** over inventing a new logo from scratch.
 
 ### 5. Apply the theme
+Prefer `fileicon` installed (`brew install fileicon`). `./scripts/poyd apply` uses it when available and flushes Dock/icon caches afterward.
 ```bash
 ./scripts/poyd apply <slug>
 ```
@@ -45,10 +46,11 @@ Or limited:
 ./scripts/poyd apply <slug> --only Slack Spotify
 ```
 
+If the user says icons look unchanged, re-apply and ensure caches were flushed (the CLI does this). Do not assume setIcon alone updated the Dock.
+
 ### 6. Confirm
 - Tell the user the theme slug, how many icons applied, and any skips/failures.
 - Mention they can revert with `./scripts/poyd revert` (or you can run it if they ask).
-- Dock/Finder may need a moment to refresh; if icons look stale, suggest logging out the Dock (`killall Dock`) only if needed.
 
 ## Revert
 ```bash

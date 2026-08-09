@@ -28,7 +28,8 @@ Agents: read [`AGENTS.md`](./AGENTS.md).
 
 - macOS
 - Swift (ships with Xcode / CLT)
-- Permission to modify app icons in `/Applications`
+- [`fileicon`](https://github.com/mklement0/fileicon) (`brew install fileicon`) — preferred apply path; clears Dock icon cache
+- Permission to modify app icons in `/Applications` (System Settings → Privacy & Security → **App Management** → enable your agent app)
 
 ## License
 

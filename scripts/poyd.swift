@@ -168,12 +168,75 @@ func ensureOriginalBackup(for app: URL) {
   try? saveIcon(icon, to: dest)
 }
 
+@discardableResult
+func run(_ launchPath: String, _ arguments: [String]) -> Int32 {
+  let proc = Process()
+  proc.executableURL = URL(fileURLWithPath: launchPath)
+  proc.arguments = arguments
+  proc.standardOutput = FileHandle.nullDevice
+  proc.standardError = FileHandle.nullDevice
+  do {
+    try proc.run()
+    proc.waitUntilExit()
+    return proc.terminationStatus
+  } catch {
+    return 127
+  }
+}
+
+func which(_ name: String) -> String? {
+  let proc = Process()
+  proc.executableURL = URL(fileURLWithPath: "/usr/bin/which")
+  proc.arguments = [name]
+  let pipe = Pipe()
+  proc.standardOutput = pipe
+  proc.standardError = FileHandle.nullDevice
+  do {
+    try proc.run()
+    proc.waitUntilExit()
+  } catch {
+    return nil
+  }
+  guard proc.terminationStatus == 0 else { return nil }
+  let data = pipe.fileHandleForReading.readDataToEndOfFile()
+  let path = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
+  return (path?.isEmpty == false) ? path : nil
+}
+
+func flushIconCaches(note appsDir: String? = nil) {
+  let home = FileManager.default.homeDirectoryForCurrentUser
+  let caches = [
+    home.appendingPathComponent("Library/Caches/com.apple.iconservices.store"),
+    home.appendingPathComponent("Library/Caches/com.apple.iconservices"),
+    home.appendingPathComponent("Library/Caches/com.apple.dock"),
+  ]
+  for url in caches {
+    try? FileManager.default.removeItem(at: url)
+  }
+  if let appsDir {
+    NSWorkspace.shared.noteFileSystemChanged(appsDir)
+  }
+  _ = run("/usr/bin/killall", ["Finder"])
+  _ = run("/usr/bin/killall", ["Dock"])
+}
+
 func applyImage(_ imageURL: URL, to app: URL) -> Bool {
+  guard FileManager.default.fileExists(atPath: imageURL.path) else {
+    fputs("fail: missing image \(imageURL.path)\n", stderr)
+    return false
+  }
+  ensureOriginalBackup(for: app)
+
+  // Prefer fileicon — NSWorkspace.setIcon often leaves Dock on a stale cached original.
+  if let fileicon = which("fileicon"),
+     run(fileicon, ["set", app.path, imageURL.path]) == 0 {
+    return true
+  }
+
   guard let image = loadImage(at: imageURL) else {
     fputs("fail: cannot load \(imageURL.path)\n", stderr)
     return false
   }
-  ensureOriginalBackup(for: app)
   let success = NSWorkspace.shared.setIcon(image, forFile: app.path, options: [])
   if !success {
     fputs("fail: setIcon returned false for \(app.path)\n", stderr)
@@ -213,8 +276,7 @@ func cmdApply(args: [String]) {
       ok += 1
     }
   }
-  // Nudge Finder/Dock icon caches a bit
-  NSWorkspace.shared.noteFileSystemChanged(appsDir)
+  if ok > 0 { flushIconCaches(note: appsDir) }
   fputs("applied \(ok), skipped \(skipped) (no theme icon)\n", stderr)
 }
 
@@ -234,7 +296,7 @@ func cmdApplyOne(args: [String]) {
   let imageURL = URL(fileURLWithPath: imagePath)
   if applyImage(imageURL, to: app) {
     print("applied \(name)")
-    NSWorkspace.shared.noteFileSystemChanged(appsDir)
+    flushIconCaches(note: appsDir)
   } else {
     exit(Int32(ExitCode.failure))
   }
@@ -266,7 +328,7 @@ func cmdRevert(args: [String]) {
       fputs("fail \(name)\n", stderr)
     }
   }
-  NSWorkspace.shared.noteFileSystemChanged(appsDir)
+  if ok > 0 { flushIconCaches(note: appsDir) }
   fputs("reverted \(ok)/\(apps.count)\n", stderr)
 }
 
