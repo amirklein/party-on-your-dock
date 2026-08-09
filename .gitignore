@@ -1,0 +1,10 @@
+# Local backups of real icons (machine-specific)
+originals/
+!originals/.gitkeep
+
+# Scratch / in-progress generation
+.generated/
+.DS_Store
+*.xcuserstate
+.idea/
+.vscode/

@@ -1,0 +1,7 @@
+---
+description: Restyle macOS Dock app icons from a theme prompt using party-on-your-dock.
+globs:
+alwaysApply: true
+---
+
+When the user asks to change / party / restyle / theme their Dock or app icons, follow AGENTS.md in this repo exactly.
