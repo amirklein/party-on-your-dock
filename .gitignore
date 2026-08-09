@@ -1,5 +1,5 @@
 # Local backups of real icons (machine-specific)
-originals/
+originals/*
 !originals/.gitkeep
 
 # Scratch / in-progress generation
