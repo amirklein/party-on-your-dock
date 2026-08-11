@@ -30,13 +30,15 @@ func printUsage() {
     Safe custom icons only — never modifies files inside .app/Contents.
 
     Usage:
-      poyd list [--apps-dir PATH]
-      poyd extract [--apps-dir PATH] [--only NAME ...]
-      poyd apply <theme> [--apps-dir PATH] [--only NAME ...]
+      poyd list [--apps-dir PATH] [--dock]
+      poyd dock
+      poyd extract [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd apply <theme> [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd apply-one <AppName> <image.png>
-      poyd revert [--apps-dir PATH] [--only NAME ...]
-      poyd verify [--apps-dir PATH] [--only NAME ...]
+      poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
 
+    --dock limits to apps pinned in the macOS Dock (skips /System/...).
     Themes: themes/<theme>/*.png (filename = app name without .app).
     Originals PNG renders: originals/ (art reference only; never written into bundles).
 
@@ -120,9 +122,60 @@ func parseAppsDir(from args: inout [String]) -> String {
   return args.remove(at: idx)
 }
 
+func parseDockFlag(from args: inout [String]) -> Bool {
+  guard let idx = args.firstIndex(of: "--dock") else { return false }
+  args.remove(at: idx)
+  return true
+}
+
 func filteredApps(_ apps: [URL], only: Set<String>?) -> [URL] {
   guard let only else { return apps }
   return apps.filter { only.contains(appName(from: $0)) }
+}
+
+/// Apps pinned in the Dock (`persistent-apps`), excluding /System paths.
+func dockAppURLs() -> [URL] {
+  let result = run("/usr/bin/defaults", ["export", "com.apple.dock", "-"], capture: true)
+  guard result.status == 0,
+        let data = result.stdout.data(using: .utf8),
+        let plist = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any],
+        let persistent = plist["persistent-apps"] as? [[String: Any]]
+  else {
+    fputs("warn: could not read Dock preferences\n", stderr)
+    return []
+  }
+
+  var urls: [URL] = []
+  var seen = Set<String>()
+  for entry in persistent {
+    guard let tile = entry["tile-data"] as? [String: Any] else { continue }
+    var path: String?
+    if let fileData = tile["file-data"] as? [String: Any],
+       let urlString = fileData["_CFURLString"] as? String {
+      if urlString.hasPrefix("file://"),
+         let u = URL(string: urlString) {
+        path = u.path
+      } else {
+        path = urlString
+      }
+    }
+    guard var path, path.hasSuffix(".app") else { continue }
+    while path.hasSuffix("/") { path.removeLast() }
+    if path.hasPrefix("/System/") { continue }
+    if seen.contains(path) { continue }
+    seen.insert(path)
+    let url = URL(fileURLWithPath: path)
+    guard FileManager.default.fileExists(atPath: url.path) else { continue }
+    urls.append(url)
+  }
+  return urls.sorted {
+    $0.lastPathComponent.localizedCaseInsensitiveCompare($1.lastPathComponent) == .orderedAscending
+  }
+}
+
+func resolveTargetApps(appsDir: String, only: Set<String>?, dockOnly: Bool) -> [URL] {
+  let base = dockOnly ? dockAppURLs() : listApps(in: appsDir)
+  return filteredApps(base, only: only)
 }
 
 @discardableResult
@@ -201,18 +254,30 @@ func flushIconCaches(note appsDir: String? = nil) {
 func cmdList(args: [String]) {
   var args = args
   let appsDir = parseAppsDir(from: &args)
-  let apps = listApps(in: appsDir)
+  let dockOnly = parseDockFlag(from: &args)
+  let apps = resolveTargetApps(appsDir: appsDir, only: nil, dockOnly: dockOnly)
   for app in apps {
     print(appName(from: app))
   }
-  fputs("(\(apps.count) apps in \(appsDir))\n", stderr)
+  let scope = dockOnly ? "Dock" : appsDir
+  fputs("(\(apps.count) apps in \(scope))\n", stderr)
+}
+
+func cmdDock(args: [String]) {
+  _ = args
+  let apps = dockAppURLs()
+  for app in apps {
+    print("\(appName(from: app))\t\(app.path)")
+  }
+  fputs("(\(apps.count) Dock apps)\n", stderr)
 }
 
 func cmdExtract(args: [String]) {
   var args = args
   let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
   let only = parseOnlyNames(from: &args)
-  let apps = filteredApps(listApps(in: appsDir), only: only)
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
 
   do {
     try ensureDir(originalsDir)
@@ -309,6 +374,7 @@ func cmdApply(args: [String]) {
   }
   args.removeFirst()
   let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
   let only = parseOnlyNames(from: &args)
   let themePath = themesDir.appendingPathComponent(theme)
 
@@ -318,7 +384,7 @@ func cmdApply(args: [String]) {
     exit(Int32(ExitCode.failure))
   }
 
-  let apps = filteredApps(listApps(in: appsDir), only: only)
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
   var ok = 0
   var skipped = 0
   for app in apps {
@@ -362,8 +428,9 @@ func cmdApplyOne(args: [String]) {
 func cmdRevert(args: [String]) {
   var args = args
   let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
   let only = parseOnlyNames(from: &args)
-  let apps = filteredApps(listApps(in: appsDir), only: only)
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
 
   var ok = 0
   for app in apps {
@@ -384,8 +451,9 @@ func cmdRevert(args: [String]) {
 func cmdVerify(args: [String]) {
   var args = args
   let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
   let only = parseOnlyNames(from: &args)
-  let apps = filteredApps(listApps(in: appsDir), only: only)
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
   var bad = 0
   for app in apps {
     let name = appName(from: app)
@@ -413,6 +481,8 @@ args.removeFirst()
 switch command {
 case "list":
   cmdList(args: args)
+case "dock":
+  cmdDock(args: args)
 case "extract":
   cmdExtract(args: args)
 case "apply":
