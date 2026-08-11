@@ -31,7 +31,11 @@ If the user asks for something that requires breaking rule 1, **refuse** and exp
 `originals/` is local and gitignored (used as art reference only — not written back into bundles).
 
 ### 3. Scope = Dock by default
-Read Dock apps from `com.apple.dock` `persistent-apps`. Theme those (minus system apps). Optionally:
+```bash
+./scripts/poyd dock
+./scripts/poyd apply <slug> --dock
+```
+Or list everything in `/Applications`:
 ```bash
 ./scripts/poyd list
 ```
@@ -71,8 +75,9 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | Command | Purpose |
 |--------|---------|
 | `./scripts/poyd list` | List `/Applications` names |
+| `./scripts/poyd dock` | List pinned Dock apps (paths) |
 | `./scripts/poyd extract` | Backup icon renders → `originals/` |
-| `./scripts/poyd apply <theme>` | Safe custom-icon apply |
+| `./scripts/poyd apply <theme>` | Safe custom-icon apply (`--dock` optional) |
 | `./scripts/poyd apply-one AppName path.png` | Apply one |
 | `./scripts/poyd revert` | Remove custom icons |
 | `./scripts/poyd verify` | Flag apps with broken code signatures |
