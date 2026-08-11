@@ -22,6 +22,11 @@ If the user asks for something that requires breaking rule 1, **refuse** and exp
 
 ### 1. Normalize the theme slug
 - Lowercase, hyphens, ASCII: `Nintendo 64` → `n64`.
+- Or let the CLI do it:
+```bash
+./scripts/poyd init-theme "Nintendo 64"
+./scripts/poyd themes
+```
 - Theme directory: `themes/<slug>/`.
 
 ### 2. Ensure PNG originals exist
@@ -81,6 +86,8 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `./scripts/poyd apply-one AppName path.png` | Apply one |
 | `./scripts/poyd revert` | Remove custom icons |
 | `./scripts/poyd verify` | Flag apps with broken code signatures |
+| `./scripts/poyd themes` | List theme packs + PNG counts |
+| `./scripts/poyd init-theme <slug>` | Create `themes/<slug>/` scaffold |
 
 See also [`SAFETY.md`](./SAFETY.md).
 

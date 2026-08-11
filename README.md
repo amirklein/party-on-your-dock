@@ -10,10 +10,12 @@ Theme your Mac Dock like a costume party. Open this repo in **Cursor**, **Codex*
 
 ```bash
 chmod +x scripts/poyd
-./scripts/poyd extract          # art-reference PNGs → originals/
+./scripts/poyd extract                    # art-reference PNGs → originals/
+./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
 # agent generates logo-only themes/<slug>/*.png from your prompt
-./scripts/poyd apply n64        # safe custom icons only
-./scripts/poyd revert           # clear custom icons → stock
+./scripts/poyd apply n64                  # safe custom icons only
+./scripts/poyd themes                     # list packs
+./scripts/poyd revert                     # clear custom icons → stock
 ```
 
 ## How it works
