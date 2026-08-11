@@ -1,7 +1,15 @@
 ---
-description: Restyle macOS Dock app icons from a theme prompt using party-on-your-dock.
+description: Hard safety and art rules for party-on-your-dock icon theming.
 globs:
 alwaysApply: true
 ---
 
-When the user asks to change / party / restyle / theme their Dock or app icons, follow AGENTS.md in this repo exactly.
+Follow `AGENTS.md` exactly for Dock/icon themes.
+
+**Never** modify files inside an `.app` bundle (no `.icns` / `Assets.car` / `Info.plist` / resign). Bundle edits break Gatekeeper (“damaged and can’t be opened”).
+
+**Only** apply icons via `fileicon` / `NSWorkspace.setIcon` custom icons. If Dock won’t update, quit apps / flush caches — do not escalate.
+
+**Art:** restyle the logo only on a **transparent** background — no square plates, fake squircles, or full-bleed poster backgrounds.
+
+**Revert:** `./scripts/poyd revert` must fully clear custom icons. Prefer Dock-scoped themes unless the user asks otherwise.
