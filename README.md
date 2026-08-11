@@ -10,25 +10,30 @@ Theme your Mac Dock like a costume party. Open this repo in **Cursor**, **Codex*
 
 ```bash
 chmod +x scripts/poyd
-./scripts/poyd extract          # backup current icons → originals/
-# agent generates themes/<slug>/*.png from your prompt
-./scripts/poyd apply n64        # apply a theme pack
-./scripts/poyd revert           # undo
+./scripts/poyd extract          # art-reference PNGs → originals/
+# agent generates logo-only themes/<slug>/*.png from your prompt
+./scripts/poyd apply n64        # safe custom icons only
+./scripts/poyd revert           # clear custom icons → stock
 ```
 
 ## How it works
 
-1. **Extract** — saves current icons under `originals/` (local only).
-2. **Restyle** — an agent AI-edits each icon to match your theme into `themes/<slug>/`.
-3. **Apply** — writes custom icons onto apps in `/Applications` via `NSWorkspace`.
+1. **Extract** — PNG renders under `originals/` (local only, for AI reference).
+2. **Restyle** — agent generates **logo-only** transparent PNGs into `themes/<slug>/`.
+3. **Apply** — `fileicon` custom icons on the `.app` (never edits files inside the bundle).
 
-Agents: read [`AGENTS.md`](./AGENTS.md).
+Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bundle surgery, logo-only art, easy revert.
 
 ## Requirements
 
 - macOS
 - Swift (ships with Xcode / CLT)
-- Permission to modify app icons in `/Applications`
+- [`fileicon`](https://github.com/mklement0/fileicon) (`brew install fileicon`)
+- **App Management** permission for your agent app (System Settings → Privacy & Security)
+
+## Safety
+
+`./scripts/poyd verify` checks code signatures. Apply/revert never modify files inside `.app/Contents`.
 
 ## License
 
