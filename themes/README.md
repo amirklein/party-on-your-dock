@@ -7,4 +7,15 @@ themes/n64/Slack.png
 themes/n64/Spotify.png
 ```
 
-Generate these with an agent (“change my theme to …”); then `./scripts/poyd apply <slug>`.
+## Scaffold a pack
+
+```bash
+./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
+./scripts/poyd themes                     # list packs + icon counts
+```
+
+Generate logo-only transparent PNGs with an agent (“change my theme to …”), then:
+
+```bash
+./scripts/poyd apply n64
+```

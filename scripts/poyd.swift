@@ -37,10 +37,13 @@ func printUsage() {
       poyd apply-one <AppName> <image.png>
       poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd themes
+      poyd init-theme <slug>
 
     --dock limits to apps pinned in the macOS Dock (skips /System/...).
     Themes: themes/<theme>/*.png (filename = app name without .app).
     Originals PNG renders: originals/ (art reference only; never written into bundles).
+    init-theme creates themes/<slug>/ for a new pack (ASCII slug, hyphens).
 
     """,
     stderr
@@ -469,6 +472,97 @@ func cmdVerify(args: [String]) {
   if bad > 0 { exit(Int32(ExitCode.failure)) }
 }
 
+func normalizeThemeSlug(_ raw: String) -> String {
+  let lowered = raw.lowercased()
+  var out = ""
+  var lastHyphen = false
+  for ch in lowered {
+    if ch.isLetter || ch.isNumber {
+      out.append(ch)
+      lastHyphen = false
+    } else if !lastHyphen {
+      out.append("-")
+      lastHyphen = true
+    }
+  }
+  while out.hasPrefix("-") { out.removeFirst() }
+  while out.hasSuffix("-") { out.removeLast() }
+  return out
+}
+
+func cmdThemes(args: [String]) {
+  _ = args
+  let fm = FileManager.default
+  guard let items = try? fm.contentsOfDirectory(
+    at: themesDir,
+    includingPropertiesForKeys: [.isDirectoryKey],
+    options: [.skipsHiddenFiles]
+  ) else {
+    fputs("error: cannot read \(themesDir.path)\n", stderr)
+    exit(Int32(ExitCode.failure))
+  }
+  let dirs = items
+    .filter { url in
+      (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true
+    }
+    .sorted { $0.lastPathComponent.localizedCaseInsensitiveCompare($1.lastPathComponent) == .orderedAscending }
+
+  if dirs.isEmpty {
+    fputs("(no theme packs yet — try: ./scripts/poyd init-theme n64)\n", stderr)
+    return
+  }
+  for dir in dirs {
+    let pngs = (try? fm.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil))?
+      .filter { $0.pathExtension.lowercased() == "png" } ?? []
+    print("\(dir.lastPathComponent)\t\(pngs.count) icons")
+  }
+  fputs("(\(dirs.count) theme packs)\n", stderr)
+}
+
+func cmdInitTheme(args: [String]) {
+  guard let raw = args.first else {
+    fputs("usage: poyd init-theme <slug>\n", stderr)
+    exit(Int32(ExitCode.usage))
+  }
+  let slug = normalizeThemeSlug(raw)
+  guard !slug.isEmpty else {
+    fputs("error: empty theme slug after normalizing \(raw)\n", stderr)
+    exit(Int32(ExitCode.usage))
+  }
+  let dir = themesDir.appendingPathComponent(slug)
+  if FileManager.default.fileExists(atPath: dir.path) {
+    fputs("theme already exists: \(dir.path)\n", stderr)
+    exit(Int32(ExitCode.failure))
+  }
+  do {
+    try ensureDir(dir)
+    let readme = dir.appendingPathComponent("README.md")
+    let body = """
+    # \(slug)
+
+    Drop logo-only transparent PNGs here named exactly like `./scripts/poyd list` apps:
+
+    ```
+    \(slug)/Slack.png
+    \(slug)/Spotify.png
+    ```
+
+    Then:
+
+    ```bash
+    ./scripts/poyd apply \(slug)
+    ```
+
+    """
+    try body.write(to: readme, atomically: true, encoding: .utf8)
+    print(dir.path)
+    fputs("created theme pack \(slug)\n", stderr)
+  } catch {
+    fputs("error: \(error)\n", stderr)
+    exit(Int32(ExitCode.failure))
+  }
+}
+
 // MARK: - main
 
 var args = Array(CommandLine.arguments.dropFirst())
@@ -493,6 +587,10 @@ case "revert":
   cmdRevert(args: args)
 case "verify":
   cmdVerify(args: args)
+case "themes":
+  cmdThemes(args: args)
+case "init-theme":
+  cmdInitTheme(args: args)
 case "help", "-h", "--help":
   printUsage()
 default:
