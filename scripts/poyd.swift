@@ -37,6 +37,7 @@ func printUsage() {
       poyd apply-one <AppName> <image.png>
       poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd themes
       poyd init-theme <slug>
 
