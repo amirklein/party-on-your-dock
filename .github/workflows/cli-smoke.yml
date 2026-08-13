@@ -1,0 +1,33 @@
+name: CLI smoke
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make CLI executable
+        run: chmod +x scripts/poyd scripts/poyd.swift
+
+      - name: Help
+        run: ./scripts/poyd help
+
+      - name: Themes list (empty ok)
+        run: ./scripts/poyd themes
+
+      - name: Init + list a throwaway theme
+        run: |
+          ./scripts/poyd init-theme "ci smoke theme"
+          ./scripts/poyd themes | grep ci-smoke-theme
+          test -f themes/ci-smoke-theme/README.md
+
+      - name: List apps
+        run: ./scripts/poyd list | head -5
+
+      - name: Dock command runs
+        run: ./scripts/poyd dock || true
