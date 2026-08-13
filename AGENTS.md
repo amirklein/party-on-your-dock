@@ -86,6 +86,7 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `./scripts/poyd apply-one AppName path.png` | Apply one |
 | `./scripts/poyd revert` | Remove custom icons |
 | `./scripts/poyd verify` | Flag apps with broken code signatures |
+| `./scripts/poyd status` | Show `custom` vs `stock` icon state |
 | `./scripts/poyd themes` | List theme packs + PNG counts |
 | `./scripts/poyd init-theme <slug>` | Create `themes/<slug>/` scaffold |
 
