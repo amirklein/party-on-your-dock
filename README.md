@@ -23,7 +23,6 @@ Or via Make:
 ```bash
 make help
 make dock
-make status
 make verify
 ```
 
