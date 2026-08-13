@@ -26,6 +26,8 @@ chmod +x scripts/poyd
 
 Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bundle surgery, logo-only art, easy revert.
 
+Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
 ## Requirements
 
 - macOS
