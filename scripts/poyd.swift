@@ -37,6 +37,7 @@ func printUsage() {
       poyd apply-one <AppName> <image.png>
       poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd themes
       poyd init-theme <slug>
 
@@ -472,6 +473,34 @@ func cmdVerify(args: [String]) {
   if bad > 0 { exit(Int32(ExitCode.failure)) }
 }
 
+func hasCustomIcon(_ app: URL) -> Bool {
+  if let fileicon = which("fileicon") {
+    let result = run(fileicon, ["test", app.path], capture: true)
+    let text = result.stdout.lowercased()
+    if text.contains("has custom icon") { return true }
+    if text.contains("has no custom icon") { return false }
+  }
+  // Fallback: Icon\r resource file present on the wrapper
+  let iconFile = app.appendingPathComponent("Icon\r")
+  return FileManager.default.fileExists(atPath: iconFile.path)
+}
+
+func cmdStatus(args: [String]) {
+  var args = args
+  let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
+  let only = parseOnlyNames(from: &args)
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
+  var custom = 0
+  for app in apps {
+    let name = appName(from: app)
+    let themed = hasCustomIcon(app)
+    if themed { custom += 1 }
+    print("\(themed ? "custom" : "stock")\t\(name)")
+  }
+  fputs("status: \(custom) custom, \(apps.count - custom) stock\n", stderr)
+}
+
 func normalizeThemeSlug(_ raw: String) -> String {
   let lowered = raw.lowercased()
   var out = ""
@@ -587,6 +616,8 @@ case "revert":
   cmdRevert(args: args)
 case "verify":
   cmdVerify(args: args)
+case "status":
+  cmdStatus(args: args)
 case "themes":
   cmdThemes(args: args)
 case "init-theme":
