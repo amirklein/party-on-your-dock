@@ -18,6 +18,14 @@ chmod +x scripts/poyd
 ./scripts/poyd revert                     # clear custom icons → stock
 ```
 
+Or via Make:
+
+```bash
+make help
+make dock
+make verify
+```
+
 ## How it works
 
 1. **Extract** — PNG renders under `originals/` (local only, for AI reference).
