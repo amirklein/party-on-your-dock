@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Safety policy
+    url: https://github.com/amirklein/party-on-your-dock/blob/main/SAFETY.md
+    about: Read safety constraints before requesting bundle-level behavior.
