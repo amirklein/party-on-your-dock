@@ -51,6 +51,10 @@ Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 See [`SECURITY.md`](./SECURITY.md) for vulnerability reporting and hard security boundaries.
 
+## Community
+
+See [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+
 ## License
 
 MIT
