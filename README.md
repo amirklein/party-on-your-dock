@@ -47,6 +47,10 @@ Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 `./scripts/poyd verify` checks code signatures. Apply/revert never modify files inside `.app/Contents`.
 
+## Security
+
+See [`SECURITY.md`](./SECURITY.md) for vulnerability reporting and hard security boundaries.
+
 ## License
 
 MIT
