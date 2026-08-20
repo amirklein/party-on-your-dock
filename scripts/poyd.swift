@@ -38,6 +38,7 @@ func printUsage() {
       poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd doctor
       poyd themes
       poyd init-theme <slug>
 
@@ -501,6 +502,38 @@ func cmdStatus(args: [String]) {
   fputs("status: \(custom) custom, \(apps.count - custom) stock\n", stderr)
 }
 
+func cmdDoctor(args: [String]) {
+  _ = args
+  var failed = 0
+
+  func check(_ label: String, ok: Bool, hint: String) {
+    if ok {
+      print("ok\t\(label)")
+    } else {
+      failed += 1
+      print("fail\t\(label)")
+      fputs("hint: \(hint)\n", stderr)
+    }
+  }
+
+  let swiftOK = FileManager.default.isExecutableFile(atPath: "/usr/bin/swift")
+    || which("swift") != nil
+  check("swift", ok: swiftOK, hint: "install Xcode Command Line Tools (`xcode-select --install`)")
+
+  let fileiconOK = which("fileicon") != nil
+  check("fileicon", ok: fileiconOK, hint: "brew install fileicon")
+
+  let poydURL = repoRoot.appendingPathComponent("scripts/poyd")
+  let poydOK = FileManager.default.isExecutableFile(atPath: poydURL.path)
+  check("scripts/poyd executable", ok: poydOK, hint: "chmod +x scripts/poyd")
+
+  let appsOK = FileManager.default.fileExists(atPath: defaultAppsDir)
+  check("/Applications readable", ok: appsOK, hint: "this tool expects apps in /Applications")
+
+  fputs("doctor: \(failed == 0 ? "ready" : "\(failed) check(s) failed")\n", stderr)
+  if failed > 0 { exit(Int32(ExitCode.failure)) }
+}
+
 func normalizeThemeSlug(_ raw: String) -> String {
   let lowered = raw.lowercased()
   var out = ""
@@ -618,6 +651,8 @@ case "verify":
   cmdVerify(args: args)
 case "status":
   cmdStatus(args: args)
+case "doctor":
+  cmdDoctor(args: args)
 case "themes":
   cmdThemes(args: args)
 case "init-theme":

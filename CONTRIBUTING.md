@@ -16,7 +16,7 @@ Read [`SAFETY.md`](./SAFETY.md) and the hard rules in [`AGENTS.md`](./AGENTS.md)
 brew install fileicon
 chmod +x scripts/poyd
 ./scripts/poyd help
-./scripts/poyd doctor   # if available on your branch
+./scripts/poyd doctor
 ```
 
 Grant **App Management** to your terminal / Cursor in System Settings → Privacy & Security.
