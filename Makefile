@@ -1,4 +1,4 @@
-.PHONY: help dock list themes verify extract
+.PHONY: help dock list themes status verify extract
 
 POYD := ./scripts/poyd
 
@@ -13,6 +13,9 @@ list:
 
 themes:
 	@$(POYD) themes
+
+status:
+	@$(POYD) status --dock
 
 verify:
 	@$(POYD) verify --dock
