@@ -22,6 +22,8 @@ enum ExitCode {
   static let failure = 2
 }
 
+let poydVersion = "0.1.0"
+
 func printUsage() {
   fputs(
     """
@@ -39,6 +41,7 @@ func printUsage() {
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd doctor
+      poyd version
       poyd themes
       poyd init-theme <slug>
 
@@ -625,6 +628,12 @@ func cmdInitTheme(args: [String]) {
   }
 }
 
+
+func cmdVersion(args: [String]) {
+  _ = args
+  print(poydVersion)
+}
+
 // MARK: - main
 
 var args = Array(CommandLine.arguments.dropFirst())
@@ -653,6 +662,8 @@ case "status":
   cmdStatus(args: args)
 case "doctor":
   cmdDoctor(args: args)
+case "version", "--version", "-v":
+  cmdVersion(args: args)
 case "themes":
   cmdThemes(args: args)
 case "init-theme":
