@@ -14,6 +14,9 @@ jobs:
       - name: Make CLI executable
         run: chmod +x scripts/poyd scripts/poyd.swift
 
+      - name: Install fileicon
+        run: brew install fileicon
+
       - name: Help
         run: ./scripts/poyd help
 
