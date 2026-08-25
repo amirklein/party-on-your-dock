@@ -24,6 +24,7 @@ Or via Make:
 make help
 make dock
 make status
+make doctor
 make verify
 ```
 
