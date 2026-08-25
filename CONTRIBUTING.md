@@ -13,8 +13,7 @@ Read [`SAFETY.md`](./SAFETY.md) and the hard rules in [`AGENTS.md`](./AGENTS.md)
 ## Local setup
 
 ```bash
-brew install fileicon
-chmod +x scripts/poyd
+./scripts/install-deps.sh
 ./scripts/poyd help
 ./scripts/poyd doctor
 ```
