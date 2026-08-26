@@ -38,6 +38,8 @@ Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bu
 
 Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
+Common questions: [`FAQ.md`](./FAQ.md).
+
 ## Requirements
 
 - macOS
