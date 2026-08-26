@@ -8,3 +8,11 @@ originals/*
 *.xcuserstate
 .idea/
 .vscode/
+
+# Theme scratch / editor noise
+themes/**/.DS_Store
+*.swp
+*~
+
+# Local tool caches
+.cache/
