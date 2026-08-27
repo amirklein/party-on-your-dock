@@ -1,4 +1,4 @@
-.PHONY: help dock list themes status verify extract doctor version
+.PHONY: help dock list themes status verify extract doctor version install-deps
 
 POYD := ./scripts/poyd
 
@@ -28,3 +28,6 @@ doctor:
 
 version:
 	@$(POYD) version
+
+install-deps:
+	@./scripts/install-deps.sh
