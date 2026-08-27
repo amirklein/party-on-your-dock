@@ -1,4 +1,4 @@
-.PHONY: help dock list themes status verify extract doctor
+.PHONY: help dock list themes status verify extract doctor version
 
 POYD := ./scripts/poyd
 
@@ -25,3 +25,6 @@ extract:
 
 doctor:
 	@$(POYD) doctor
+
+version:
+	@$(POYD) version
