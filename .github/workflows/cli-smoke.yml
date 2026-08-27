@@ -20,6 +20,9 @@ jobs:
       - name: Help
         run: ./scripts/poyd help
 
+      - name: Version
+        run: ./scripts/poyd version
+
       - name: Themes list (empty ok)
         run: ./scripts/poyd themes
 
