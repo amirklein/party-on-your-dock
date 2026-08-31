@@ -42,6 +42,7 @@ func printUsage() {
       poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd doctor
       poyd version
+      poyd missing <theme> [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd themes
       poyd init-theme <slug>
 
@@ -634,6 +635,40 @@ func cmdVersion(args: [String]) {
   print(poydVersion)
 }
 
+
+func cmdMissing(args: [String]) {
+  var args = args
+  guard let theme = args.first else {
+    fputs("usage: poyd missing <theme> [--dock] [--only NAME ...]\n", stderr)
+    exit(Int32(ExitCode.usage))
+  }
+  args.removeFirst()
+  let appsDir = parseAppsDir(from: &args)
+  let dockOnly = parseDockFlag(from: &args)
+  let only = parseOnlyNames(from: &args)
+  let themePath = themesDir.appendingPathComponent(theme)
+  var isDir: ObjCBool = false
+  guard FileManager.default.fileExists(atPath: themePath.path, isDirectory: &isDir), isDir.boolValue else {
+    fputs("error: theme not found: \(themePath.path)\n", stderr)
+    exit(Int32(ExitCode.failure))
+  }
+
+  let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
+  var missing = 0
+  for app in apps {
+    let name = appName(from: app)
+    let iconURL = themePath.appendingPathComponent("\(name).png")
+    if FileManager.default.fileExists(atPath: iconURL.path) {
+      print("present\t\(name)")
+    } else {
+      missing += 1
+      print("missing\t\(name)")
+    }
+  }
+  fputs("missing: \(missing)/\(apps.count) without \(theme) icon\n", stderr)
+  if missing > 0 { exit(Int32(ExitCode.failure)) }
+}
+
 // MARK: - main
 
 var args = Array(CommandLine.arguments.dropFirst())
@@ -664,6 +699,8 @@ case "doctor":
   cmdDoctor(args: args)
 case "version", "--version", "-v":
   cmdVersion(args: args)
+case "missing":
+  cmdMissing(args: args)
 case "themes":
   cmdThemes(args: args)
 case "init-theme":
