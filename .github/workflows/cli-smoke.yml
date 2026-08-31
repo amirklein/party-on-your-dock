@@ -14,6 +14,9 @@ jobs:
       - name: Make CLI executable
         run: chmod +x scripts/poyd scripts/poyd.swift
 
+      - name: Install fileicon
+        run: brew install fileicon
+
       - name: Help
         run: ./scripts/poyd help
 
@@ -31,3 +34,9 @@ jobs:
 
       - name: Dock command runs
         run: ./scripts/poyd dock || true
+
+      - name: Doctor
+        run: ./scripts/poyd doctor
+
+      - name: Status (Dock-scoped; empty Dock ok in CI)
+        run: ./scripts/poyd status --dock || true
