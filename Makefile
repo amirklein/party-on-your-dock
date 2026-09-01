@@ -1,4 +1,4 @@
-.PHONY: help dock list themes status verify extract doctor version install-deps
+.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert
 
 POYD := ./scripts/poyd
 
@@ -31,3 +31,15 @@ version:
 
 install-deps:
 	@./scripts/install-deps.sh
+
+missing:
+	@$(POYD) missing $(THEME) --dock
+
+validate:
+	@./scripts/validate-theme.sh $(THEME)
+
+init-theme:
+	@$(POYD) init-theme "$(NAME)"
+
+revert:
+	@$(POYD) revert --dock
