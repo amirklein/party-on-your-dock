@@ -56,6 +56,13 @@ For each target app:
    - Prompt pattern: *Restyle this app logo in the style of \<theme\>. Output only the symbol on a transparent background — no square background, no poster, no extra chrome. Keep it identifiable.*
 3. Save as `themes/<slug>/<AppName>.png`.
 
+### 4b. Validate theme filenames (before apply)
+```bash
+./scripts/poyd missing <slug> --dock
+./scripts/validate-theme.sh <slug>
+```
+Fix any `unknown` PNG names or missing Dock apps before applying.
+
 ### 5. Apply (safe path only)
 Needs `fileicon` (`brew install fileicon`) and **App Management** permission for the agent app.
 ```bash
