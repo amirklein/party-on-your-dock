@@ -21,3 +21,11 @@ Generate logo-only transparent PNGs with an agent (“change my theme to …”)
 ./scripts/validate-theme.sh n64
 ./scripts/poyd apply n64
 ```
+
+## Coverage report
+
+```bash
+./scripts/theme-coverage.sh n64 --dock
+```
+
+Lists present vs missing Dock icons for a theme pack.
