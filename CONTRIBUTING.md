@@ -28,6 +28,17 @@ Prefer small PRs:
 2. Docs / agent instructions
 3. Theme scaffolding / tooling (not huge binary dumps unless intentional)
 
+## Theme validation
+
+Before applying or committing a theme pack:
+
+```bash
+./scripts/poyd missing <slug> --dock
+./scripts/validate-theme.sh <slug>
+```
+
+Fix unknown PNG filenames (must match `./scripts/poyd list`) and generate missing icons.
+
 ## Before you open a PR
 
 - [ ] `./scripts/poyd help` still runs

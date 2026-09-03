@@ -14,8 +14,10 @@ themes/n64/Spotify.png
 ./scripts/poyd themes                     # list packs + icon counts
 ```
 
-Generate logo-only transparent PNGs with an agent (“change my theme to …”), then:
+Generate logo-only transparent PNGs with an agent (“change my theme to …”), then validate:
 
 ```bash
+./scripts/poyd missing n64 --dock
+./scripts/validate-theme.sh n64
 ./scripts/poyd apply n64
 ```
