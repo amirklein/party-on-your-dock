@@ -35,9 +35,9 @@ func printUsage() {
       poyd list [--apps-dir PATH] [--dock]
       poyd dock
       poyd extract [--apps-dir PATH] [--dock] [--only NAME ...]
-      poyd apply <theme> [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd apply <theme> [--apps-dir PATH] [--dock] [--dry-run] [--only NAME ...]
       poyd apply-one <AppName> <image.png>
-      poyd revert [--apps-dir PATH] [--dock] [--only NAME ...]
+      poyd revert [--apps-dir PATH] [--dock] [--dry-run] [--only NAME ...]
       poyd verify [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd status [--apps-dir PATH] [--dock] [--only NAME ...]
       poyd doctor
@@ -133,6 +133,12 @@ func parseAppsDir(from args: inout [String]) -> String {
 
 func parseDockFlag(from args: inout [String]) -> Bool {
   guard let idx = args.firstIndex(of: "--dock") else { return false }
+  args.remove(at: idx)
+  return true
+}
+
+func parseDryRunFlag(from args: inout [String]) -> Bool {
+  guard let idx = args.firstIndex(of: "--dry-run") else { return false }
   args.remove(at: idx)
   return true
 }
@@ -384,6 +390,7 @@ func cmdApply(args: [String]) {
   args.removeFirst()
   let appsDir = parseAppsDir(from: &args)
   let dockOnly = parseDockFlag(from: &args)
+  let dryRun = parseDryRunFlag(from: &args)
   let only = parseOnlyNames(from: &args)
   let themePath = themesDir.appendingPathComponent(theme)
 
@@ -403,13 +410,17 @@ func cmdApply(args: [String]) {
       skipped += 1
       continue
     }
-    if applyImage(iconURL, to: app) {
+    if dryRun {
+      print("would apply \(name)")
+      ok += 1
+    } else if applyImage(iconURL, to: app) {
       print("applied \(name)")
       ok += 1
     }
   }
-  if ok > 0 { flushIconCaches(note: appsDir) }
-  fputs("applied \(ok), skipped \(skipped) (no theme icon)\n", stderr)
+  if !dryRun && ok > 0 { flushIconCaches(note: appsDir) }
+  let verb = dryRun ? "would apply" : "applied"
+  fputs("\(verb) \(ok), skipped \(skipped) (no theme icon)\n", stderr)
 }
 
 func cmdApplyOne(args: [String]) {
@@ -438,12 +449,20 @@ func cmdRevert(args: [String]) {
   var args = args
   let appsDir = parseAppsDir(from: &args)
   let dockOnly = parseDockFlag(from: &args)
+  let dryRun = parseDryRunFlag(from: &args)
   let only = parseOnlyNames(from: &args)
   let apps = resolveTargetApps(appsDir: appsDir, only: only, dockOnly: dockOnly)
 
   var ok = 0
   for app in apps {
     let name = appName(from: app)
+    if dryRun {
+      if hasCustomIcon(app) {
+        print("would revert \(name)")
+        ok += 1
+      }
+      continue
+    }
     // Clear custom icon only — stock bundle icon returns.
     // Never re-apply originals/*.png; never restore Contents/Resources/*.icns.
     if clearCustomIcon(on: app) {
@@ -453,8 +472,9 @@ func cmdRevert(args: [String]) {
       fputs("fail \(name)\n", stderr)
     }
   }
-  if ok > 0 { flushIconCaches(note: appsDir) }
-  fputs("reverted \(ok)/\(apps.count)\n", stderr)
+  if !dryRun && ok > 0 { flushIconCaches(note: appsDir) }
+  let verb = dryRun ? "would revert" : "reverted"
+  fputs("\(verb) \(ok)/\(apps.count)\n", stderr)
 }
 
 func cmdVerify(args: [String]) {
