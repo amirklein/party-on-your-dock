@@ -1,4 +1,4 @@
-.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert
+.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert apply
 
 POYD := ./scripts/poyd
 
@@ -43,3 +43,6 @@ init-theme:
 
 revert:
 	@$(POYD) revert --dock
+
+apply:
+	@$(POYD) apply $(THEME) --dock
