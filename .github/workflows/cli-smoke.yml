@@ -43,3 +43,11 @@ jobs:
 
       - name: Status (Dock-scoped; empty Dock ok in CI)
         run: ./scripts/poyd status --dock || true
+
+      - name: Missing coverage (expect failures on empty theme)
+        run: |
+          ./scripts/poyd init-theme "ci-missing-theme"
+          ./scripts/poyd missing ci-missing-theme --dock || true
+
+      - name: Validate theme script runs
+        run: ./scripts/validate-theme.sh ci-missing-theme || true
