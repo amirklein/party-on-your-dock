@@ -6,7 +6,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 - [x] `poyd missing <theme>` — list Dock apps without a theme PNG
 - [x] Theme pack validation script (`scripts/validate-theme.sh`) (PNG names vs Dock / Applications)
-- [ ] Optional dry-run for apply/revert
+- [x] Optional dry-run for apply/revert (`--dry-run` on apply/revert)
 - [x] Keep `make` targets in sync with new CLI commands
 
 ## Later
