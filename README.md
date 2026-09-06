@@ -13,6 +13,8 @@ chmod +x scripts/poyd
 ./scripts/poyd extract                    # art-reference PNGs → originals/
 ./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
 # agent generates logo-only themes/<slug>/*.png from your prompt
+./scripts/poyd missing n64 --dock         # coverage check
+./scripts/validate-theme.sh n64            # filename check
 ./scripts/poyd apply n64                  # safe custom icons only
 ./scripts/poyd themes                     # list packs
 ./scripts/poyd revert                     # clear custom icons → stock
@@ -34,7 +36,7 @@ make verify
 2. **Restyle** — agent generates **logo-only** transparent PNGs into `themes/<slug>/`.
 3. **Apply** — `fileicon` custom icons on the `.app` (never edits files inside the bundle).
 
-Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bundle surgery, logo-only art, easy revert.
+Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bundle surgery, logo-only art, easy revert. See also [`ART.md`](./ART.md) (icon rules) and [`ARCHITECTURE.md`](./ARCHITECTURE.md) (how apply works).
 
 Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
