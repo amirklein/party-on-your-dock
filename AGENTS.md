@@ -94,9 +94,9 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `./scripts/poyd list` | List `/Applications` names |
 | `./scripts/poyd dock` | List pinned Dock apps (paths) |
 | `./scripts/poyd extract` | Backup icon renders → `originals/` |
-| `./scripts/poyd apply <theme>` | Safe custom-icon apply (`--dock` optional) |
+| `./scripts/poyd apply <theme>` | Safe custom-icon apply (`--dock`, `--dry-run` optional) |
 | `./scripts/poyd apply-one AppName path.png` | Apply one |
-| `./scripts/poyd revert` | Remove custom icons |
+| `./scripts/poyd revert` | Remove custom icons (`--dry-run` optional) |
 | `./scripts/poyd verify` | Flag apps with broken code signatures |
 | `./scripts/poyd status` | Show `custom` vs `stock` icon state |
 | `./scripts/poyd doctor` | Check Swift, fileicon, and CLI setup |
@@ -104,6 +104,8 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `./scripts/poyd missing <theme>` | List target apps lacking a theme PNG |
 | `./scripts/poyd themes` | List theme packs + PNG counts |
 | `./scripts/poyd init-theme <slug>` | Create `themes/<slug>/` scaffold |
+| `./scripts/theme-coverage.sh <slug>` | Dock coverage report for a theme pack |
+| `./scripts/refresh-dock.sh` | Safe Dock/Finder refresh after apply |
 
 See also [`SAFETY.md`](./SAFETY.md).
 
