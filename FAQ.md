@@ -2,7 +2,13 @@
 
 ## Why do my Dock icons still look stock after apply?
 
-Custom icons often do not refresh while an app is running. Quit the app, run apply again if needed, and let Dock refresh. Do **not** patch files inside `.app/Contents`.
+Custom icons often do not refresh while an app is running. Quit the app, run apply again if needed, then refresh Dock caches safely:
+
+```bash
+./scripts/refresh-dock.sh
+```
+
+Never patch files inside `.app/Contents`. Do **not** patch files inside `.app/Contents`.
 
 ## Why did an app say it was “damaged and can’t be opened”?
 
@@ -15,6 +21,13 @@ Prefer Dock apps:
 ```bash
 ./scripts/poyd dock
 ./scripts/poyd apply <theme> --dock
+```
+
+## Can I preview before applying?
+
+```bash
+./scripts/poyd apply <theme> --dock --dry-run
+./scripts/poyd revert --dry-run --dock
 ```
 
 ## How do I undo a theme?
@@ -31,4 +44,4 @@ Maybe not. Root-owned, SIP-protected, or locked apps can fail `fileicon set`. Sk
 
 ## What should generated icons look like?
 
-Logo-only on a transparent background. No square plates, fake squircles, or full-bleed poster art. See `AGENTS.md`.
+Logo-only on a transparent background. No square plates, fake squircles, or full-bleed poster art. See [`ART.md`](./ART.md) and [`AGENTS.md`](./AGENTS.md).
