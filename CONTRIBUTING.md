@@ -49,3 +49,10 @@ Fix unknown PNG filenames (must match `./scripts/poyd list`) and generate missin
 ## Agent-driven themes
 
 If an agent generates icons, keep PNGs under `themes/<slug>/` with filenames matching `./scripts/poyd list` / `./scripts/poyd dock`. Do not commit `originals/` (gitignored machine backups).
+
+## Shell completion
+
+```bash
+source ./scripts/poyd.bash   # bash
+source ./scripts/poyd.zsh   # zsh
+```
