@@ -51,3 +51,11 @@ jobs:
 
       - name: Validate theme script runs
         run: ./scripts/validate-theme.sh ci-missing-theme || true
+
+      - name: Dry-run apply and revert
+        run: |
+          ./scripts/poyd apply ci-missing-theme --dry-run || true
+          ./scripts/poyd revert --dry-run --dock || true
+
+      - name: Theme coverage script runs
+        run: ./scripts/theme-coverage.sh ci-missing-theme --dock || true
