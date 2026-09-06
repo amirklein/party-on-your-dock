@@ -64,6 +64,11 @@ For each target app:
 Fix any `unknown` PNG names or missing Dock apps before applying.
 
 ### 5. Apply (safe path only)
+Preview first:
+```bash
+./scripts/poyd apply <slug> --dock --dry-run
+```
+
 Needs `fileicon` (`brew install fileicon`) and **App Management** permission for the agent app.
 ```bash
 ./scripts/poyd apply <slug>
