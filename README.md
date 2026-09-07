@@ -28,6 +28,9 @@ make dock
 make status
 make doctor
 make verify
+make apply THEME=n64
+make coverage THEME=n64
+make refresh
 ```
 
 ## How it works
