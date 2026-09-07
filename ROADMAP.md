@@ -13,7 +13,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 - [x] Per-theme coverage report (`scripts/theme-coverage.sh`)
 - [ ] Safer Dock refresh helpers that never touch `.app/Contents`
-- [ ] Example logo-only theme pack (small, documented)
+- [x] Example logo-only theme pack (`themes/example/` README scaffold)
 
 ## Non-goals
 
