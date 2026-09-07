@@ -1,8 +1,9 @@
-.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert apply
+.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert apply coverage
 
 POYD := ./scripts/poyd
 
 help:
+	@echo "Make targets: dock list themes status verify extract doctor version install-deps missing validate coverage init-theme apply revert"
 	@$(POYD) help
 
 dock:
@@ -46,3 +47,6 @@ revert:
 
 apply:
 	@$(POYD) apply $(THEME) --dock
+
+coverage:
+	@./scripts/theme-coverage.sh $(THEME) --dock
