@@ -633,10 +633,13 @@ func cmdInitTheme(args: [String]) {
     \(slug)/Spotify.png
     ```
 
-    Then:
+    Validate and preview:
 
     ```bash
-    ./scripts/poyd apply \(slug)
+    ./scripts/poyd missing \(slug) --dock
+    ./scripts/validate-theme.sh \(slug)
+    ./scripts/poyd apply \(slug) --dock --dry-run
+    ./scripts/poyd apply \(slug) --dock
     ```
 
     """
