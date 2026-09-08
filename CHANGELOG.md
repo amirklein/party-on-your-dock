@@ -11,8 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Scripts: `install-deps.sh`, `validate-theme.sh`, `theme-coverage.sh`, `refresh-dock.sh`
 - Shell completion: `scripts/poyd.bash`, `scripts/poyd.zsh`
 - Docs: FAQ, SUPPORT, ROADMAP, RELEASING, CONTRIBUTING, CODE_OF_CONDUCT, ART.md, ARCHITECTURE.md
-- CI: macOS smoke workflow (help, themes, doctor, status, version, missing, validate)
-- Repo hygiene: Makefile shortcuts (including `apply`), Dependabot, EditorConfig, issue/PR templates, CODEOWNERS
+- Example theme scaffold: `themes/example/`
+- CI: macOS smoke (help, themes, doctor, status, version, missing, validate, dry-run, coverage, refresh-dock)
+- Repo hygiene: Makefile shortcuts (`apply`, `coverage`, `refresh`), Dependabot, EditorConfig, issue/PR templates, CODEOWNERS
 
 ### Security
 - Custom-icon-only apply path; never edit `.app/Contents` or ad-hoc resign apps
