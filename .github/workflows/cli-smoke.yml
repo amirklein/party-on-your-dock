@@ -59,3 +59,8 @@ jobs:
 
       - name: Theme coverage script runs
         run: ./scripts/theme-coverage.sh ci-missing-theme --dock || true
+
+      - name: Refresh-dock script is executable
+        run: |
+          chmod +x scripts/refresh-dock.sh
+          ./scripts/refresh-dock.sh || true
