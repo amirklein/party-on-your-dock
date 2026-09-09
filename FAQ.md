@@ -8,7 +8,7 @@ Custom icons often do not refresh while an app is running. Quit the app, run app
 ./scripts/refresh-dock.sh
 ```
 
-Never patch files inside `.app/Contents`. Do **not** patch files inside `.app/Contents`.
+Never patch files inside `.app/Contents`.
 
 ## Why did an app say it was “damaged and can’t be opened”?
 
@@ -45,3 +45,13 @@ Maybe not. Root-owned, SIP-protected, or locked apps can fail `fileicon set`. Sk
 ## What should generated icons look like?
 
 Logo-only on a transparent background. No square plates, fake squircles, or full-bleed poster art. See [`ART.md`](./ART.md) and [`AGENTS.md`](./AGENTS.md).
+
+## How do I check theme coverage?
+
+```bash
+./scripts/poyd missing <theme> --dock
+./scripts/theme-coverage.sh <theme> --dock
+make coverage THEME=<theme>
+```
+
+Generate missing PNGs before apply. See [`themes/example/`](./themes/example/) for a documented pack scaffold.
