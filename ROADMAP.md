@@ -4,9 +4,15 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
+<<<<<<< HEAD
 - [x] `make preview` target wrapping `apply --dry-run`
 - [ ] Fish shell completion (`scripts/poyd.fish`)
 - [x] Link example theme pack from main README
+=======
+- [ ] `make preview` target wrapping `apply --dry-run`
+- [x] Fish shell completion (`scripts/poyd.fish`)
+- [ ] Link example theme pack from main README
+>>>>>>> 814e54c (Add Fish shell completion for poyd.)
 
 ## Shipped
 

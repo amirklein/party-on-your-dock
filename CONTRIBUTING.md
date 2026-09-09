@@ -55,4 +55,5 @@ If an agent generates icons, keep PNGs under `themes/<slug>/` with filenames mat
 ```bash
 source ./scripts/poyd.bash   # bash
 source ./scripts/poyd.zsh   # zsh
+source ./scripts/poyd.fish  # fish
 ```
