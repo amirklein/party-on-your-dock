@@ -29,3 +29,21 @@ Generate logo-only transparent PNGs with an agent (“change my theme to …”)
 ```
 
 Lists present vs missing Dock icons for a theme pack.
+
+## Example pack
+
+See [`example/`](./example/) for a documented scaffold (README only, no bundled PNGs).
+
+## Full workflow
+
+```bash
+./scripts/poyd init-theme "My Theme"
+./scripts/poyd missing my-theme --dock
+./scripts/validate-theme.sh my-theme
+./scripts/theme-coverage.sh my-theme --dock
+./scripts/poyd apply my-theme --dock --dry-run
+./scripts/poyd apply my-theme --dock
+./scripts/refresh-dock.sh
+```
+
+Or via Make: `make apply THEME=my-theme`, `make coverage THEME=my-theme`, `make refresh`.
