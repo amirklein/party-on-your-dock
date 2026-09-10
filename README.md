@@ -43,6 +43,8 @@ Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bu
 
 Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
+Example theme scaffold: [`themes/example/`](./themes/example/).
+
 Common questions: [`FAQ.md`](./FAQ.md).
 
 ## Requirements
