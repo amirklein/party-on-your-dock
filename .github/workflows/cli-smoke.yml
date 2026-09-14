@@ -64,3 +64,6 @@ jobs:
         run: |
           chmod +x scripts/refresh-dock.sh
           ./scripts/refresh-dock.sh || true
+
+      - name: Make preview target runs
+        run: make preview THEME=ci-missing-theme || true
