@@ -4,15 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-<<<<<<< HEAD
-- [x] `make preview` target wrapping `apply --dry-run`
-- [ ] Fish shell completion (`scripts/poyd.fish`)
-- [x] Link example theme pack from main README
-=======
-- [ ] `make preview` target wrapping `apply --dry-run`
-- [x] Fish shell completion (`scripts/poyd.fish`)
-- [ ] Link example theme pack from main README
->>>>>>> 814e54c (Add Fish shell completion for poyd.)
+- [ ] CI smoke step for `make preview`
+- [ ] Document `make preview` in README
+- [ ] SAFETY.md mention `refresh-dock.sh`
+- [ ] `install-deps` chmod `poyd.fish`
 
 ## Shipped
 
@@ -26,6 +21,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] `make refresh` target for `scripts/refresh-dock.sh`
 - [x] CI smoke step for `refresh-dock.sh`
 - [x] Document helper scripts in ARCHITECTURE.md
+- [x] `make preview` target wrapping `apply --dry-run`
+- [x] Fish shell completion (`scripts/poyd.fish`)
+- [x] Link example theme pack from main README
 
 ## Non-goals
 
