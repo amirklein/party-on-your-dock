@@ -10,6 +10,7 @@ party-on-your-dock is an **agent-operated CLI**, not a GUI app.
 | `scripts/validate-theme.sh` | Check theme PNG filenames vs `/Applications` |
 | `scripts/theme-coverage.sh` | Dock coverage report for a theme pack |
 | `scripts/refresh-dock.sh` | Safe Dock/Finder refresh (no bundle edits) |
+| `scripts/poyd.bash` / `.zsh` / `.fish` | Optional shell tab completion |
 | `AGENTS.md` | Agent playbook for theme prompts |
 | `themes/<slug>/` | Generated logo-only PNG packs |
 | `originals/` | Local art references (gitignored) |
@@ -45,3 +46,7 @@ After apply, quit themed apps if needed, then:
 ```
 
 Clears icon caches and restarts Dock/Finder only — never writes inside `.app/Contents/`.
+
+## Shell completion
+
+Optional tab completion for bash, zsh, and fish — source the matching file under `scripts/` (see [`CONTRIBUTING.md`](./CONTRIBUTING.md)).
