@@ -19,4 +19,4 @@ Incident (Aug 2026): replacing `Contents/Resources/*.icns` and running `codesign
 - `./scripts/poyd verify` — report apps with broken signatures.
 - `./scripts/poyd revert` — clears custom icons only (does **not** re-glue `originals/*.png`).
 
-If the Dock still shows stock icons while apps are running, quit the app / refresh Dock — **do not** escalate to bundle edits.
+If the Dock still shows stock icons while apps are running, quit the app, then run `./scripts/refresh-dock.sh` (safe cache clear + Dock/Finder restart) — **do not** escalate to bundle edits.
