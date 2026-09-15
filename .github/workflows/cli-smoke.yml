@@ -67,3 +67,6 @@ jobs:
 
       - name: Make preview target runs
         run: make preview THEME=ci-missing-theme || true
+
+      - name: Make help runs
+        run: make help
