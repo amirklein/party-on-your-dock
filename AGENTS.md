@@ -88,6 +88,22 @@ If icons don’t show in the Dock while apps are running: tell the user custom i
 ```
 This **removes** custom icons (stock icons return). It must not leave substitute “original PNGs” glued on if a full clear is requested — clearing custom icons is the goal.
 
+
+## Make shortcuts
+
+| Target | Purpose |
+|--------|---------|
+| `make dock` | List Dock apps |
+| `make status` | Custom vs stock icons (Dock) |
+| `make extract` | Backup icons → `originals/` |
+| `make missing THEME=<slug>` | Apps lacking theme PNGs |
+| `make validate THEME=<slug>` | Filename validation |
+| `make coverage THEME=<slug>` | Dock coverage report |
+| `make preview THEME=<slug>` | Dry-run apply |
+| `make apply THEME=<slug>` | Apply theme to Dock |
+| `make refresh` | Safe Dock/Finder refresh |
+| `make revert` | Clear custom icons (Dock) |
+
 ## Commands
 | Command | Purpose |
 |--------|---------|
