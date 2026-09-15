@@ -4,9 +4,12 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] AGENTS.md Make shortcuts table
-- [ ] Shell completion in ARCHITECTURE.md
 - [ ] CONTRIBUTING Make workflow section
+- [ ] FAQ `make preview` mention
+- [ ] README shell completion note
+- [ ] CI `make help` smoke step
+- [ ] CHANGELOG doc batch entry
+- [ ] SUPPORT link to `themes/example/`
 
 ## Shipped
 
@@ -17,16 +20,11 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Per-theme coverage report (`scripts/theme-coverage.sh`)
 - [x] Safer Dock refresh helpers (`scripts/refresh-dock.sh`)
 - [x] Example logo-only theme pack (`themes/example/`)
-- [x] `make refresh` target for `scripts/refresh-dock.sh`
-- [x] CI smoke step for `refresh-dock.sh`
-- [x] Document helper scripts in ARCHITECTURE.md
-- [x] `make preview` target wrapping `apply --dry-run`
-- [x] Fish shell completion (`scripts/poyd.fish`)
-- [x] Link example theme pack from main README
-- [x] CI smoke step for `make preview`
-- [x] Document `make preview` in README
-- [x] SAFETY.md mention `refresh-dock.sh`
-- [x] `install-deps` chmod `poyd.fish`
+- [x] `make refresh` / `make preview` targets
+- [x] CI smoke (refresh-dock, make preview)
+- [x] Fish/bash/zsh shell completion
+- [x] AGENTS.md Make shortcuts table
+- [x] Shell completion in ARCHITECTURE.md
 
 ## Non-goals
 
