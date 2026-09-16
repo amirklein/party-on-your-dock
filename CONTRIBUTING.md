@@ -28,6 +28,22 @@ Prefer small PRs:
 2. Docs / agent instructions
 3. Theme scaffolding / tooling (not huge binary dumps unless intentional)
 
+
+## Make workflow
+
+```bash
+make init-theme NAME="My Theme"
+make missing THEME=my-theme
+make validate THEME=my-theme
+make coverage THEME=my-theme
+make preview THEME=my-theme
+make apply THEME=my-theme
+make refresh
+make revert
+```
+
+Use `THEME=<slug>` for theme-scoped targets. See [`AGENTS.md`](./AGENTS.md) for the full Make shortcuts table.
+
 ## Theme validation
 
 Before applying or committing a theme pack:
