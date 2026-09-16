@@ -55,6 +55,8 @@ Common questions: [`FAQ.md`](./FAQ.md).
 - [`fileicon`](https://github.com/mklement0/fileicon) (`brew install fileicon`)
 - **App Management** permission for your agent app (System Settings → Privacy & Security)
 
+Shell completion (optional): see [`CONTRIBUTING.md`](./CONTRIBUTING.md#shell-completion).
+
 ## Safety
 
 `./scripts/poyd verify` checks code signatures. Apply/revert never modify files inside `.app/Contents`.
