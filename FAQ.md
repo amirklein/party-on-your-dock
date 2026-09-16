@@ -28,6 +28,7 @@ Prefer Dock apps:
 ```bash
 ./scripts/poyd apply <theme> --dock --dry-run
 ./scripts/poyd revert --dry-run --dock
+make preview THEME=<theme>
 ```
 
 ## How do I undo a theme?
