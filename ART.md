@@ -26,3 +26,5 @@ Validate names before apply:
 ./scripts/validate-theme.sh <slug>
 ./scripts/poyd missing <slug> --dock
 ```
+
+See also [`themes/example/`](./themes/example/) for a documented pack scaffold.
