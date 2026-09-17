@@ -5,8 +5,9 @@
 1. [`FAQ.md`](./FAQ.md) — Dock refresh, Gatekeeper, revert
 2. [`SAFETY.md`](./SAFETY.md) — what is never allowed
 3. [`AGENTS.md`](./AGENTS.md) — agent workflow for theme prompts
-4. `./scripts/poyd doctor` — local setup checks
-5. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
+4. [`themes/example/`](./themes/example/) — documented theme pack scaffold
+5. `./scripts/poyd doctor` — local setup checks
+6. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
 
 ## Bugs / features
 
