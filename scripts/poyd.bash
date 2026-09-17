@@ -18,6 +18,13 @@ _poyd_completions() {
         if [[ -d themes ]]; then
           COMPREPLY=( $(compgen -W "$(find themes -mindepth 1 -maxdepth 1 -type d -exec basename {} \;)" -- "${cur}") )
         fi
+      elif [[ ${COMP_CWORD} -gt 2 ]] && [[ "${COMP_WORDS[1]}" == "apply" ]]; then
+        COMPREPLY=( $(compgen -W "--dock --dry-run --only" -- "${cur}") )
+      fi
+      ;;
+    revert)
+      if [[ ${COMP_CWORD} -eq 2 ]]; then
+        COMPREPLY=( $(compgen -W "--dock --dry-run --only" -- "${cur}") )
       fi
       ;;
     apply-one)
