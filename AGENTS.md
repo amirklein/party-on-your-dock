@@ -100,6 +100,7 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `make validate THEME=<slug>` | Filename validation |
 | `make coverage THEME=<slug>` | Dock coverage report |
 | `make preview THEME=<slug>` | Dry-run apply |
+| `make preview-revert` | Dry-run revert (Dock) |
 | `make apply THEME=<slug>` | Apply theme to Dock |
 | `make refresh` | Safe Dock/Finder refresh |
 | `make revert` | Clear custom icons (Dock) |
