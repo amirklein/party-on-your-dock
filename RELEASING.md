@@ -12,6 +12,9 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    ./scripts/poyd version
    ./scripts/poyd themes
    ./scripts/poyd status --dock
+   make help
+   make doctor
+   make preview THEME=example || true
    ```
 4. Open a PR; confirm CI smoke is green
 5. Merge to `main`
