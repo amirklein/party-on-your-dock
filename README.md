@@ -32,6 +32,7 @@ make apply THEME=n64
 make coverage THEME=n64
 make refresh
 make preview THEME=n64
+make preview-revert
 ```
 
 ## How it works
