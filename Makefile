@@ -1,9 +1,9 @@
-.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert apply coverage refresh preview
+.PHONY: help dock list themes status verify extract doctor version install-deps missing validate init-theme revert apply coverage refresh preview preview-revert
 
 POYD := ./scripts/poyd
 
 help:
-	@echo "Make targets: dock list themes status verify extract doctor version install-deps missing validate coverage init-theme apply revert refresh preview"
+	@echo "Make targets: dock list themes status verify extract doctor version install-deps missing validate coverage init-theme apply revert refresh preview preview-revert"
 	@$(POYD) help
 
 dock:
@@ -56,3 +56,6 @@ refresh:
 
 preview:
 	@$(POYD) apply $(THEME) --dock --dry-run
+
+preview-revert:
+	@$(POYD) revert --dock --dry-run
