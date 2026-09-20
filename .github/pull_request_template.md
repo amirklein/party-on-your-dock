@@ -10,6 +10,7 @@
 - [ ] I did **not** use `codesign --sign` / ad-hoc re-signing
 - [ ] I only used safe custom-icon paths (`fileicon` / `NSWorkspace.setIcon`)
 - [ ] I tested `./scripts/poyd help`
+- [ ] I tested `make doctor` (or `./scripts/poyd doctor`)
 
 ## Test Plan
 - [ ] 
