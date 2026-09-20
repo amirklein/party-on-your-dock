@@ -70,3 +70,6 @@ jobs:
 
       - name: Make help runs
         run: make help
+
+      - name: install-deps script runs
+        run: ./scripts/install-deps.sh
