@@ -73,3 +73,6 @@ jobs:
 
       - name: install-deps script runs
         run: ./scripts/install-deps.sh
+
+      - name: Make preview-revert target runs
+        run: make preview-revert || true
