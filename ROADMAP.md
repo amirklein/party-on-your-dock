@@ -4,12 +4,12 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CONTRIBUTING Make workflow section
-- [ ] FAQ `make preview` mention
-- [ ] README shell completion note
-- [ ] CI `make help` smoke step
-- [ ] CHANGELOG doc batch entry
+- [ ] `make preview-revert` target
+- [ ] CI smoke for `install-deps.sh`
 - [ ] SUPPORT link to `themes/example/`
+- [ ] RELEASING.md Make smoke steps
+- [ ] Bash completion for `--dock` / `--dry-run` flags
+- [ ] PR template `make doctor` check
 
 ## Shipped
 
@@ -21,10 +21,14 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Safer Dock refresh helpers (`scripts/refresh-dock.sh`)
 - [x] Example logo-only theme pack (`themes/example/`)
 - [x] `make refresh` / `make preview` targets
-- [x] CI smoke (refresh-dock, make preview)
+- [x] CI smoke (refresh-dock, make preview, make help)
 - [x] Fish/bash/zsh shell completion
 - [x] AGENTS.md Make shortcuts table
 - [x] Shell completion in ARCHITECTURE.md
+- [x] CONTRIBUTING Make workflow section
+- [x] FAQ `make preview` mention
+- [x] README shell completion note
+- [x] CHANGELOG doc batch entry
 
 ## Non-goals
 
