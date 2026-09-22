@@ -18,6 +18,13 @@ _poyd() {
         local -a themes
         themes=(${${(f)"$(find themes -mindepth 1 -maxdepth 1 -type d -exec basename {} \; 2>/dev/null)"}:#})
         _describe 'theme' themes
+      elif (( CURRENT > 3 )) && [[ "${words[2]}" == apply ]]; then
+        _describe 'flag' '--dock --dry-run --only'
+      fi
+      ;;
+    revert)
+      if (( CURRENT == 2 )); then
+        _describe 'flag' '--dock --dry-run --only'
       fi
       ;;
     apply-one)
