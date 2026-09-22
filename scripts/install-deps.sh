@@ -16,7 +16,9 @@ fi
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 chmod +x   "$ROOT/scripts/poyd"   "$ROOT/scripts/poyd.swift"   "$ROOT/scripts/install-deps.sh"   "$ROOT/scripts/validate-theme.sh"   "$ROOT/scripts/theme-coverage.sh"   "$ROOT/scripts/refresh-dock.sh" \
-  "$ROOT/scripts/poyd.fish"
+  "$ROOT/scripts/poyd.fish" \
+  "$ROOT/scripts/poyd.bash" \
+  "$ROOT/scripts/poyd.zsh"
 
 echo "ok: scripts marked executable"
 echo "Next: ./scripts/poyd doctor"
