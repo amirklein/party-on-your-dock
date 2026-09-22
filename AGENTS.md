@@ -67,6 +67,8 @@ Fix any `unknown` PNG names or missing Dock apps before applying.
 Preview first:
 ```bash
 ./scripts/poyd apply <slug> --dock --dry-run
+./scripts/poyd revert --dock --dry-run
+# or: make preview THEME=<slug> && make preview-revert
 ```
 
 Needs `fileicon` (`brew install fileicon`) and **App Management** permission for the agent app.
