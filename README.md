@@ -9,7 +9,7 @@ Theme your Mac Dock like a costume party. Open this repo in **Cursor**, **Codex*
 ## Quick start
 
 ```bash
-chmod +x scripts/poyd
+./scripts/install-deps.sh              # fileicon + executable scripts
 ./scripts/poyd extract                    # art-reference PNGs → originals/
 ./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
 # agent generates logo-only themes/<slug>/*.png from your prompt
