@@ -42,8 +42,9 @@ See [`example/`](./example/) for a documented scaffold (README only, no bundled 
 ./scripts/validate-theme.sh my-theme
 ./scripts/theme-coverage.sh my-theme --dock
 ./scripts/poyd apply my-theme --dock --dry-run
+./scripts/poyd revert --dock --dry-run
 ./scripts/poyd apply my-theme --dock
 ./scripts/refresh-dock.sh
 ```
 
-Or via Make: `make apply THEME=my-theme`, `make coverage THEME=my-theme`, `make refresh`.
+Or via Make: `make preview THEME=my-theme`, `make preview-revert`, `make apply THEME=my-theme`, `make coverage THEME=my-theme`, `make refresh`.
