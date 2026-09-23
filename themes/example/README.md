@@ -14,7 +14,11 @@ Workflow:
 ./scripts/validate-theme.sh my-theme
 ./scripts/theme-coverage.sh my-theme --dock
 ./scripts/poyd apply my-theme --dock --dry-run
+./scripts/poyd revert --dock --dry-run
 ./scripts/poyd apply my-theme --dock
+./scripts/refresh-dock.sh
 ```
 
 Art rules: [`ART.md`](../../ART.md) — logo only, transparent background.
+
+Make: `make preview THEME=my-theme`, `make preview-revert`, `make apply THEME=my-theme`, `make refresh`.
