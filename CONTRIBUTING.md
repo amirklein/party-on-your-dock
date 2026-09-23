@@ -37,6 +37,7 @@ make missing THEME=my-theme
 make validate THEME=my-theme
 make coverage THEME=my-theme
 make preview THEME=my-theme
+make preview-revert
 make apply THEME=my-theme
 make refresh
 make revert
