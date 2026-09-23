@@ -17,3 +17,6 @@ complete -c ./scripts/poyd -f
 complete -c ./scripts/poyd -n "not __fish_seen_subcommand_from list dock extract apply apply-one revert verify status doctor version missing themes init-theme help" -a "list dock extract apply apply-one revert verify status doctor version missing themes init-theme help"
 complete -c ./scripts/poyd -n "__fish_seen_subcommand_from apply missing init-theme" -a "(__poyd_themes)"
 complete -c ./scripts/poyd -n "__fish_seen_subcommand_from apply-one" -a "(__poyd_apps)"
+
+complete -c poyd -n "__fish_seen_subcommand_from apply revert" -a "--dock --dry-run --only"
+complete -c ./scripts/poyd -n "__fish_seen_subcommand_from apply revert" -a "--dock --dry-run --only"
