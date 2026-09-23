@@ -76,3 +76,6 @@ jobs:
 
       - name: Make preview-revert target runs
         run: make preview-revert || true
+
+      - name: Make coverage target runs
+        run: make coverage THEME=ci-missing-theme || true
