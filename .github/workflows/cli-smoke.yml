@@ -79,3 +79,6 @@ jobs:
 
       - name: Make coverage target runs
         run: make coverage THEME=ci-missing-theme || true
+
+      - name: Make validate target runs
+        run: make validate THEME=ci-missing-theme || true
