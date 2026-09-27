@@ -4,11 +4,12 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] Zsh/fish completion for `--dock` / `--dry-run` flags
-- [ ] `install-deps` chmod bash/zsh completion scripts
-- [ ] ARCHITECTURE.md Make shortcuts section
-- [ ] themes/README preview-revert in workflow
-- [ ] AGENTS apply workflow: preview-revert before apply
+- [ ] CI smoke for `make validate`
+- [ ] Makefile require `NAME` for `init-theme`
+- [ ] RELEASING.md: `make coverage` in smoke checklist
+- [ ] CHANGELOG entry for coverage/THEME-guard batch
+- [ ] ARCHITECTURE: document fish/zsh flag completion
+- [ ] PR template: `make help` smoke check
 
 ## Shipped
 
@@ -20,14 +21,13 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Safer Dock refresh helpers (`scripts/refresh-dock.sh`)
 - [x] Example logo-only theme pack (`themes/example/`)
 - [x] `make refresh` / `make preview` / `make preview-revert` targets
-- [x] CI smoke (refresh-dock, make preview, make preview-revert, make help, install-deps)
-- [x] Fish/bash/zsh shell completion (bash flag hints)
-- [x] AGENTS.md Make shortcuts table
-- [x] Shell completion in ARCHITECTURE.md
-- [x] CONTRIBUTING Make workflow section
-- [x] SUPPORT / ART / CONTRIBUTING links to `themes/example/`
-- [x] RELEASING Make smoke steps
-- [x] PR template `make doctor` check
+- [x] CI smoke (preview, preview-revert, help, install-deps, coverage)
+- [x] Fish/bash/zsh shell completion (flag hints on all three)
+- [x] AGENTS / themes README / example preview-revert workflow
+- [x] ARCHITECTURE Make shortcuts section
+- [x] `install-deps` chmod bash/zsh/fish completion scripts
+- [x] Makefile `THEME` required for theme-scoped targets
+- [x] README / SUPPORT install-deps and Make workflow links
 
 ## Non-goals
 
