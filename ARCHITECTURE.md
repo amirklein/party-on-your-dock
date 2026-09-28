@@ -49,8 +49,8 @@ Clears icon caches and restarts Dock/Finder only — never writes inside `.app/C
 
 ## Shell completion
 
-Optional tab completion for bash, zsh, and fish — source the matching file under `scripts/` (see [`CONTRIBUTING.md`](./CONTRIBUTING.md)).
+Optional tab completion for bash, zsh, and fish — source the matching file under `scripts/` (see [`CONTRIBUTING.md`](./CONTRIBUTING.md)). Bash, zsh, and fish completion also suggest `--dock`, `--dry-run`, and `--only` for `apply` / `revert`.
 
 ## Make shortcuts
 
-[`Makefile`](./Makefile) wraps common Dock-scoped flows: `make preview`, `make preview-revert`, `make apply`, `make coverage`, `make refresh`, `make revert`. See [`AGENTS.md`](./AGENTS.md) for the full table.
+[`Makefile`](./Makefile) wraps common Dock-scoped flows: `make preview`, `make preview-revert`, `make apply`, `make coverage`, `make refresh`, `make revert`. Theme-scoped targets require `THEME=<slug>` (`make init-theme` uses `NAME="..."`). See [`AGENTS.md`](./AGENTS.md) for the full table.
