@@ -24,6 +24,7 @@ Or via Make:
 
 ```bash
 make help
+make init-theme NAME="Nintendo 64"
 make dock
 make status
 make doctor
