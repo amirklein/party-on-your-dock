@@ -4,7 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make init-theme NAME=...` (throwaway slug)
+- [ ] FAQ: document `make init-theme NAME=...`
+- [ ] README: mention `make init-theme` in Make block
+- [ ] CHANGELOG: note Makefile NAME guard + PR template batch
 
 ## Shipped
 
@@ -16,7 +18,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Safer Dock refresh helpers (`scripts/refresh-dock.sh`)
 - [x] Example logo-only theme pack (`themes/example/`)
 - [x] `make refresh` / `make preview` / `make preview-revert` targets
-- [x] CI smoke (validate, coverage, preview, preview-revert, help, install-deps)
+- [x] CI smoke (validate, coverage, preview, preview-revert, help, install-deps, init-theme)
 - [x] Fish/bash/zsh shell completion (flag hints)
 - [x] Makefile `THEME` / `NAME` guards for scoped targets
 - [x] ARCHITECTURE completion flags + Make shortcuts docs
