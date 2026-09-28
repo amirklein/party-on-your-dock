@@ -11,6 +11,7 @@
 - [ ] I only used safe custom-icon paths (`fileicon` / `NSWorkspace.setIcon`)
 - [ ] I tested `./scripts/poyd help`
 - [ ] I tested `make doctor` (or `./scripts/poyd doctor`)
+- [ ] I tested `make help`
 
 ## Test Plan
 - [ ] 
