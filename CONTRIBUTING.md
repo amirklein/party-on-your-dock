@@ -43,7 +43,7 @@ make refresh
 make revert
 ```
 
-Use `THEME=<slug>` for theme-scoped targets. See [`AGENTS.md`](./AGENTS.md) for the full Make shortcuts table.
+Use `THEME=<slug>` for theme-scoped targets (`apply`, `preview`, `missing`, `validate`, `coverage`). `make init-theme` requires `NAME="My Theme"`. Make fails fast if `THEME` or `NAME` is missing. See [`AGENTS.md`](./AGENTS.md) for the full Make shortcuts table.
 
 ## Theme validation
 
