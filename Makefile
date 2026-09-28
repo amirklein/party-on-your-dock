@@ -4,10 +4,11 @@ POYD := ./scripts/poyd
 
 # Require THEME for theme-scoped targets (init-theme uses NAME)
 require-theme = $(if $(THEME),,$(error THEME is required, e.g. make apply THEME=n64))
+require-name = $(if $(NAME),,$(error NAME is required, e.g. make init-theme NAME="My Theme"))
 
 help:
 	@echo "Make targets: dock list themes status verify extract doctor version install-deps missing validate coverage init-theme apply revert refresh preview preview-revert"
-	@echo "Theme-scoped targets need THEME=<slug> (init-theme uses NAME=...)"
+	@echo "Theme-scoped targets need THEME=<slug> (init-theme uses NAME="..."; others use THEME=<slug>)"
 	@$(POYD) help
 
 dock:
@@ -43,7 +44,7 @@ missing: require-theme
 validate: require-theme
 	@./scripts/validate-theme.sh $(THEME)
 
-init-theme:
+init-theme: require-name
 	@$(POYD) init-theme "$(NAME)"
 
 revert:
