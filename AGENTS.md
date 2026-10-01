@@ -98,6 +98,7 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | `make dock` | List Dock apps |
 | `make status` | Custom vs stock icons (Dock) |
 | `make extract` | Backup icons → `originals/` |
+| `make init-theme NAME="..."` | Scaffold `themes/<slug>/` (requires `NAME=`) |
 | `make missing THEME=<slug>` | Apps lacking theme PNGs |
 | `make validate THEME=<slug>` | Filename validation |
 | `make coverage THEME=<slug>` | Dock coverage report |
