@@ -88,3 +88,6 @@ jobs:
 
       - name: Make missing target runs
         run: make missing THEME=ci-missing-theme || true
+
+      - name: Make doctor target runs
+        run: make doctor
