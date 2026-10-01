@@ -25,6 +25,8 @@ Validate names before apply:
 ```bash
 ./scripts/validate-theme.sh <slug>
 ./scripts/poyd missing <slug> --dock
+make validate THEME=<slug>
+make preview THEME=<slug>
 ```
 
 See also [`themes/example/`](./themes/example/) for a documented pack scaffold.
