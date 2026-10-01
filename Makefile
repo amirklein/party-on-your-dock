@@ -38,28 +38,34 @@ version:
 install-deps:
 	@./scripts/install-deps.sh
 
-missing: require-theme
+missing:
+	$(require-theme)
 	@$(POYD) missing $(THEME) --dock
 
-validate: require-theme
+validate:
+	$(require-theme)
 	@./scripts/validate-theme.sh $(THEME)
 
-init-theme: require-name
+init-theme:
+	$(require-name)
 	@$(POYD) init-theme "$(NAME)"
 
 revert:
 	@$(POYD) revert --dock
 
-apply: require-theme
+apply:
+	$(require-theme)
 	@$(POYD) apply $(THEME) --dock
 
-coverage: require-theme
+coverage:
+	$(require-theme)
 	@./scripts/theme-coverage.sh $(THEME) --dock
 
 refresh:
 	@./scripts/refresh-dock.sh
 
-preview: require-theme
+preview:
+	$(require-theme)
 	@$(POYD) apply $(THEME) --dock --dry-run
 
 preview-revert:
