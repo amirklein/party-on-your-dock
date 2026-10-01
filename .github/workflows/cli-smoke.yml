@@ -85,3 +85,6 @@ jobs:
 
       - name: Make init-theme target runs
         run: make init-theme NAME="ci make init theme"
+
+      - name: Make missing target runs
+        run: make missing THEME=ci-missing-theme || true
