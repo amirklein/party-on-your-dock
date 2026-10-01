@@ -82,3 +82,6 @@ jobs:
 
       - name: Make validate target runs
         run: make validate THEME=ci-missing-theme || true
+
+      - name: Make init-theme target runs
+        run: make init-theme NAME="ci make init theme"
