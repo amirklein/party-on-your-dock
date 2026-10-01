@@ -44,7 +44,7 @@ make preview-revert
 
 Agents: read [`AGENTS.md`](./AGENTS.md) and [`SAFETY.md`](./SAFETY.md) — no bundle surgery, logo-only art, easy revert. See also [`ART.md`](./ART.md) (icon rules) and [`ARCHITECTURE.md`](./ARCHITECTURE.md) (how apply works).
 
-Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md). Release checklist: [`RELEASING.md`](./RELEASING.md).
 
 Example theme scaffold: [`themes/example/`](./themes/example/).
 
