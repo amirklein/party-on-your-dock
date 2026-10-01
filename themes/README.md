@@ -11,6 +11,7 @@ themes/n64/Spotify.png
 
 ```bash
 ./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
+make init-theme NAME="Nintendo 64"
 ./scripts/poyd themes                     # list packs + icon counts
 ```
 
