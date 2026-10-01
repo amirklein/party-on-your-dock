@@ -18,6 +18,7 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    make preview-revert || true
    make coverage THEME=example || true
    make init-theme NAME="release smoke theme" || true
+   make missing THEME=example || true
    ```
 4. Open a PR; confirm CI smoke is green
 5. Merge to `main`
