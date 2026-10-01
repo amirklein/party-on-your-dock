@@ -9,7 +9,8 @@
 5. [`CONTRIBUTING.md`](./CONTRIBUTING.md#make-workflow) — Make workflow for theme packs
 6. `./scripts/install-deps.sh` — Homebrew fileicon + script permissions
 7. `./scripts/poyd doctor` — local setup checks
-8. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
+8. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
+9. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
 
 ## Bugs / features
 
