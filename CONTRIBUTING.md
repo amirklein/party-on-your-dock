@@ -33,6 +33,7 @@ Prefer small PRs:
 
 ```bash
 make init-theme NAME="My Theme"
+make themes
 make missing THEME=my-theme
 make validate THEME=my-theme
 make coverage THEME=my-theme
