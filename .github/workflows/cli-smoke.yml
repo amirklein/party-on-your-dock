@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Make CLI executable
-        run: chmod +x scripts/poyd scripts/poyd.swift
+        run: chmod +x scripts/poyd scripts/poyd.swift scripts/validate-theme.sh scripts/theme-coverage.sh scripts/refresh-dock.sh scripts/install-deps.sh
 
       - name: Install fileicon
         run: brew install fileicon
