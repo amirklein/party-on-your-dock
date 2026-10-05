@@ -6,7 +6,7 @@
 2. [`SAFETY.md`](./SAFETY.md) — what is never allowed
 3. [`AGENTS.md`](./AGENTS.md) — agent workflow for theme prompts
 4. [`themes/example/`](./themes/example/) — documented theme pack scaffold
-5. [`CONTRIBUTING.md`](./CONTRIBUTING.md#make-workflow) — Make workflow for theme packs
+5. [`CONTRIBUTING.md`](./CONTRIBUTING.md#make-workflow) — Make workflow for theme packs (`make themes` lists packs)
 6. `./scripts/install-deps.sh` — Homebrew fileicon + script permissions
 7. `./scripts/poyd doctor` — local setup checks
 8. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
