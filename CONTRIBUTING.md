@@ -56,6 +56,8 @@ Before applying or committing a theme pack:
 
 Fix unknown PNG filenames (must match `./scripts/poyd list`) and generate missing icons.
 
+Before cutting a release, see [`RELEASING.md`](./RELEASING.md) for smoke checks.
+
 ## Before you open a PR
 
 - [ ] `./scripts/poyd help` still runs
