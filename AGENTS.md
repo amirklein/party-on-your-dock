@@ -96,6 +96,9 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | Target | Purpose |
 |--------|---------|
 | `make dock` | List Dock apps |
+| `make themes` | List theme packs |
+| `make version` | Print CLI version |
+| `make doctor` | Local setup checks |
 | `make status` | Custom vs stock icons (Dock) |
 | `make extract` | Backup icons → `originals/` |
 | `make init-theme NAME="..."` | Scaffold `themes/<slug>/` (requires `NAME=`) |
