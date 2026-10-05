@@ -4,9 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] FAQ: document `make init-theme NAME=...`
-- [ ] README: mention `make init-theme` in Make block
-- [ ] CHANGELOG: note Makefile NAME guard + PR template batch
+- [ ] CI smoke: chmod all helper scripts in workflow
+- [ ] RELEASING: make validate in smoke checklist
+- [ ] FAQ: make validate step
+- [ ] PR template: make validate check
 
 ## Shipped
 
@@ -17,14 +18,13 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Per-theme coverage report (`scripts/theme-coverage.sh`)
 - [x] Safer Dock refresh helpers (`scripts/refresh-dock.sh`)
 - [x] Example logo-only theme pack (`themes/example/`)
-- [x] `make refresh` / `make preview` / `make preview-revert` targets
-- [x] CI smoke (validate, coverage, preview, preview-revert, help, install-deps, init-theme)
+- [x] Full Make workflow (preview, apply, coverage, init-theme, guards)
+- [x] CI smoke (doctor, missing, init-theme, validate, coverage, preview)
 - [x] Fish/bash/zsh shell completion (flag hints)
-- [x] Makefile `THEME` / `NAME` guards for scoped targets
-- [x] ARCHITECTURE completion flags + Make shortcuts docs
-- [x] RELEASING make coverage / preview-revert smoke
-- [x] PR template `make help` check
-- [x] CONTRIBUTING THEME/NAME Make requirements
+- [x] Docs batch: FAQ/AGENTS/ART/themes init-theme, CHANGELOG NAME guard, RELEASING missing
+- [x] README / CONTRIBUTING / SUPPORT links to RELEASING and Make workflow
+- [x] PR template `make help` / `make preview` checks
+- [x] Makefile help examples for THEME/NAME
 
 ## Non-goals
 
