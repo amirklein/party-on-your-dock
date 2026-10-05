@@ -14,6 +14,7 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    ./scripts/poyd status --dock
    make help
    make doctor
+   make themes
    make preview THEME=example || true
    make preview-revert || true
    make coverage THEME=example || true
