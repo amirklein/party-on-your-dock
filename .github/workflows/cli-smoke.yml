@@ -91,3 +91,6 @@ jobs:
 
       - name: Make doctor target runs
         run: make doctor
+
+      - name: Make themes target runs
+        run: make themes
