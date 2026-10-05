@@ -54,6 +54,7 @@ Logo-only on a transparent background. No square plates, fake squircles, or full
 ./scripts/poyd missing <theme> --dock
 ./scripts/theme-coverage.sh <theme> --dock
 make coverage THEME=<theme>
+make validate THEME=<theme>
 ```
 
 Generate missing PNGs before apply. See [`themes/example/`](./themes/example/) for a documented pack scaffold.
