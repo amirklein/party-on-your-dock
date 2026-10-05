@@ -21,4 +21,4 @@ chmod +x   "$ROOT/scripts/poyd"   "$ROOT/scripts/poyd.swift"   "$ROOT/scripts/in
   "$ROOT/scripts/poyd.zsh"
 
 echo "ok: scripts marked executable"
-echo "Next: ./scripts/poyd doctor"
+echo "Next: ./scripts/poyd doctor && make help"
