@@ -55,4 +55,4 @@ Optional tab completion for bash, zsh, and fish — source the matching file und
 
 [`Makefile`](./Makefile) wraps common Dock-scoped flows: `make init-theme`, `make missing`, `make preview`, `make preview-revert`, `make apply`, `make coverage`, `make refresh`, `make revert`. Theme-scoped targets require `THEME=<slug>` (`make init-theme` uses `NAME="..."`). See [`AGENTS.md`](./AGENTS.md) for the full table.
 
-CI smoke exercises `make doctor`, `make missing`, `make validate`, `make coverage`, `make preview`, and related targets on every PR.
+CI smoke exercises `make doctor`, `make version`, `make themes`, `make missing`, `make validate`, `make coverage`, `make preview`, and related targets on every PR.
