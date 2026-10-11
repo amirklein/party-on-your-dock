@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: \`make version\`
-- [ ] RELEASING / README: \`make themes\` in smoke docs
-- [ ] AGENTS: Make shortcuts table (\`make themes\`, \`make version\`)
-- [ ] PR template: \`make themes\` check
+- [ ] RELEASING: `make version` in smoke checklist
+- [ ] FAQ: list packs via `make themes`
+- [ ] Makefile: help examples for `make themes` / `make version`
+- [ ] CI smoke: `make install-deps` target
 
 ## Shipped
 
@@ -26,6 +26,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] PR template `make help` / `make preview` checks
 - [x] Makefile help examples for THEME/NAME
 - [x] Batch #137-145: ROADMAP/CHANGELOG batch, CI chmod helpers + make themes, RELEASING/FAQ validate, install-deps make help, ARCHITECTURE CI note, PR template validate
+- [x] Batch #146-155: make themes/version docs, CI make version, AGENTS/ARCHITECTURE/CONTRIBUTING/SUPPORT/PR template
 
 ## Non-goals
 
