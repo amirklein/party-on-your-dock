@@ -1,5 +1,16 @@
 # FAQ
 
+## How do I install dependencies?
+
+```bash
+./scripts/install-deps.sh
+# or
+make install-deps
+make doctor
+```
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md#local-setup).
+
 ## Why do my Dock icons still look stock after apply?
 
 Custom icons often do not refresh while an app is running. Quit the app, run apply again if needed, then refresh Dock caches safely:
