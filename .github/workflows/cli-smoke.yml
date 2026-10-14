@@ -100,3 +100,9 @@ jobs:
 
       - name: Make themes target runs
         run: make themes
+
+      - name: Make list target runs
+        run: make list | head -5
+
+      - name: Make dock target runs
+        run: make dock || true
