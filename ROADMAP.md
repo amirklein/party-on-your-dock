@@ -29,6 +29,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #146-155: make themes/version docs, CI make version, AGENTS/ARCHITECTURE/CONTRIBUTING/SUPPORT/PR template
 - [x] Batch #156-159: ROADMAP/CHANGELOG batch, RELEASING make version, FAQ make themes
 - [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
+- [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
 
 ## Non-goals
 
