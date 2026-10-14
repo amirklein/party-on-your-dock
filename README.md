@@ -28,6 +28,7 @@ make init-theme NAME="Nintendo 64"
 make dock
 make status
 make doctor
+make version
 make themes
 make verify
 make apply THEME=n64
