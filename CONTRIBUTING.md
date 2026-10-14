@@ -32,6 +32,7 @@ Prefer small PRs:
 ## Make workflow
 
 ```bash
+make install-deps
 make doctor
 make version
 make init-theme NAME="My Theme"
