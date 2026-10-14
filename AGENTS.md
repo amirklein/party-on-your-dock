@@ -96,6 +96,8 @@ This **removes** custom icons (stock icons return). It must not leave substitute
 | Target | Purpose |
 |--------|---------|
 | `make dock` | List Dock apps |
+| `make list` | List `/Applications` names |
+| `make install-deps` | Homebrew fileicon + chmod scripts |
 | `make themes` | List theme packs |
 | `make version` | Print CLI version |
 | `make doctor` | Local setup checks |
