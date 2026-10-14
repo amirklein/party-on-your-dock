@@ -26,6 +26,7 @@ Validate names before apply:
 ./scripts/validate-theme.sh <slug>
 ./scripts/poyd missing <slug> --dock
 make validate THEME=<slug>
+make missing THEME=<slug>
 make preview THEME=<slug>
 ```
 
