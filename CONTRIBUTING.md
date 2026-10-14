@@ -32,6 +32,8 @@ Prefer small PRs:
 ## Make workflow
 
 ```bash
+make doctor
+make version
 make init-theme NAME="My Theme"
 make themes
 make missing THEME=my-theme
