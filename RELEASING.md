@@ -13,6 +13,7 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    ./scripts/poyd themes
    ./scripts/poyd status --dock
    make help
+   make install-deps
    make doctor
    make version
    make themes
