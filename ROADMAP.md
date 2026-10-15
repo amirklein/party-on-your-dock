@@ -4,10 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make list` and `make dock` targets
-- [ ] README / SUPPORT / CONTRIBUTING: `make install-deps`
-- [ ] install-deps script: suggest `make install-deps`
-- [ ] PR template: `make install-deps` check
+- [ ] ROADMAP: dedupe shipped batch lines after direct-to-main doc commits
+- [ ] FAQ / ART / themes README: keep Make shortcuts in sync
+- [ ] CI smoke: `make status` or `make verify` (Dock-scoped, CI-safe)
 
 ## Shipped
 
@@ -29,7 +28,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #146-155: make themes/version docs, CI make version, AGENTS/ARCHITECTURE/CONTRIBUTING/SUPPORT/PR template
 - [x] Batch #156-159: ROADMAP/CHANGELOG batch, RELEASING make version, FAQ make themes
 - [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
-- [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
+- [x] Batch #170 follow-up: make list/dock CI, install-deps docs, FAQ setup, ART make missing, themes README make themes (mostly direct to main)
 
 ## Non-goals
 
