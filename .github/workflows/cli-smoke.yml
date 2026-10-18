@@ -106,3 +106,9 @@ jobs:
 
       - name: Make dock target runs
         run: make dock || true
+
+      - name: Make status target runs
+        run: make status || true
+
+      - name: Make verify target runs
+        run: make verify || true
