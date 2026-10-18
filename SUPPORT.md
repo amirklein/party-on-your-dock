@@ -8,9 +8,10 @@
 4. [`themes/example/`](./themes/example/) — documented theme pack scaffold
 5. [`CONTRIBUTING.md`](./CONTRIBUTING.md#make-workflow) — Make workflow for theme packs (`make themes` lists packs)
 6. `./scripts/install-deps.sh` or `make install-deps` — Homebrew fileicon + script permissions
-7. `./scripts/poyd doctor` — local setup checks
-8. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
-9. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
+7. `./scripts/poyd doctor` or `make doctor` — local setup checks
+8. `make list` / `make dock` — list apps before theming
+9. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
+10. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
 
 ## Bugs / features
 
