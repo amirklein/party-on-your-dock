@@ -13,6 +13,7 @@
 - [ ] I tested `make doctor` (or `./scripts/poyd doctor`)
 - [ ] I tested `make help`
 - [ ] I tested `make install-deps` (if deps/scripts changed)
+- [ ] I tested `make status` (if Dock/apply flow changed) || true
 - [ ] I tested `make themes` (if CLI/Make changed)
 - [ ] I tested `make version` (if CLI/Make changed)
 - [ ] I tested `make validate THEME=example` (if theme PNGs changed) || true
