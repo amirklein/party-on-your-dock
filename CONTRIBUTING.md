@@ -34,6 +34,8 @@ Prefer small PRs:
 ```bash
 make install-deps
 make doctor
+make list
+make dock
 make version
 make init-theme NAME="My Theme"
 make themes
