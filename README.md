@@ -27,6 +27,7 @@ make help
 make install-deps
 make init-theme NAME="Nintendo 64"
 make dock
+make list
 make status
 make doctor
 make version
