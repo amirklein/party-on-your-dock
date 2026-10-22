@@ -112,3 +112,6 @@ jobs:
 
       - name: Make verify target runs
         run: make verify || true
+
+      - name: Make refresh target runs
+        run: make refresh || true
