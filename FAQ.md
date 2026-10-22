@@ -17,6 +17,7 @@ Custom icons often do not refresh while an app is running. Quit the app, run app
 
 ```bash
 ./scripts/refresh-dock.sh
+make refresh
 ```
 
 Never patch files inside `.app/Contents`.
