@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make list` and `make dock` targets
-- [ ] README / SUPPORT / CONTRIBUTING: `make install-deps`
-- [ ] install-deps script: suggest `make install-deps`
-- [ ] PR template: `make install-deps` check
+- [ ] CI smoke: `make refresh` target
+- [ ] RELEASING: `make status` / `make verify` / `make refresh` smoke
+- [ ] FAQ / themes README: `make refresh` and missing/validate Make lines
+- [ ] PR template: `make verify` check
 
 ## Shipped
 
@@ -29,7 +29,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #146-155: make themes/version docs, CI make version, AGENTS/ARCHITECTURE/CONTRIBUTING/SUPPORT/PR template
 - [x] Batch #156-159: ROADMAP/CHANGELOG batch, RELEASING make version, FAQ make themes
 - [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
-- [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
+- [x] Batch #179-188: make status/verify CI, list/dock docs, CONTRIBUTING/SUPPORT/RELEASING, themes/example Make workflow
 
 ## Non-goals
 
