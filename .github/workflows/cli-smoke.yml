@@ -115,3 +115,6 @@ jobs:
 
       - name: Make refresh target runs
         run: make refresh || true
+
+      - name: Make revert target runs
+        run: make revert || true
