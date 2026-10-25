@@ -48,6 +48,7 @@ make preview-revert
 
 ```bash
 ./scripts/poyd revert --dock
+make revert
 # or
 ./scripts/poyd revert --only Spotify
 ```
