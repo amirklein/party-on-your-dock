@@ -16,6 +16,7 @@
 - [ ] I tested `make status` (if Dock/apply flow changed) || true
 - [ ] I tested `make verify` (if Dock/apply flow changed) || true
 - [ ] I tested `make refresh` (if Dock/apply flow changed) || true
+- [ ] I tested `make revert` (if revert flow changed) || true
 - [ ] I tested `make themes` (if CLI/Make changed)
 - [ ] I tested `make version` (if CLI/Make changed)
 - [ ] I tested `make validate THEME=example` (if theme PNGs changed) || true
