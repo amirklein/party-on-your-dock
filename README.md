@@ -25,6 +25,7 @@ Or via Make:
 ```bash
 make help
 make install-deps
+make extract
 make init-theme NAME="Nintendo 64"
 make dock
 make list
