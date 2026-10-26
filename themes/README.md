@@ -49,4 +49,4 @@ See [`example/`](./example/) for a documented scaffold (README only, no bundled 
 ./scripts/refresh-dock.sh
 ```
 
-Or via Make: `make missing THEME=my-theme`, `make validate THEME=my-theme`, `make preview THEME=my-theme`, `make preview-revert`, `make apply THEME=my-theme`, `make coverage THEME=my-theme`, `make refresh`.
+Or via Make: `make missing THEME=my-theme`, `make validate THEME=my-theme`, `make preview THEME=my-theme`, `make preview-revert`, `make apply THEME=my-theme`, `make coverage THEME=my-theme`, `make refresh`, `make revert`.
