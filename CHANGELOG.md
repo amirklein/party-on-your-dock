@@ -12,7 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Shell completion: `scripts/poyd.bash`, `scripts/poyd.zsh`, `scripts/poyd.fish`; flag completion for `--dock` / `--dry-run` (bash, zsh, fish)
 - Docs: FAQ, SUPPORT, ROADMAP, RELEASING, CONTRIBUTING, CODE_OF_CONDUCT, ART.md, ARCHITECTURE.md; AGENTS Make shortcuts table; CONTRIBUTING Make workflow
 - Example theme scaffold: `themes/example/`
-- CI: macOS smoke (help, themes, doctor, status, version, missing, validate, dry-run, coverage, refresh-dock, make preview, make preview-revert, make help, make coverage, make doctor, make missing, make init-theme, install-deps, make version, make themes, make list, make dock, make status, make verify, make refresh)
+- CI: macOS smoke (help, themes, doctor, status, version, missing, validate, dry-run, coverage, refresh-dock, make preview, make preview-revert, make help, make coverage, make doctor, make missing, make init-theme, install-deps, make version, make themes, make list, make dock, make status, make verify, make refresh, make revert)
+- Docs/CI batch #197-204: make revert CI, README/FAQ revert, Makefile help, ARCHITECTURE/PR template refresh
 - Docs/CI batch #189-196: make refresh CI, RELEASING smoke, FAQ/themes README, Makefile help, PR template verify
 - Docs/CI batch #179-188: make status/verify CI, README/RELEASING list, CONTRIBUTING/SUPPORT, PR template status, themes/example
 - Docs/CI batch #170 follow-up: make list/dock CI, install-deps across README/SUPPORT/CONTRIBUTING/PR template, FAQ setup, ART make missing
