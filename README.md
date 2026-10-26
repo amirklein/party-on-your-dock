@@ -38,6 +38,7 @@ make coverage THEME=n64
 make refresh
 make preview THEME=n64
 make preview-revert
+make revert
 ```
 
 ## How it works
