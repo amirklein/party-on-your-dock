@@ -7,6 +7,7 @@
 # or
 make install-deps
 make doctor
+make extract
 ```
 
 See [`CONTRIBUTING.md`](./CONTRIBUTING.md#local-setup).
