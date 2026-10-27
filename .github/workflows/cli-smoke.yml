@@ -121,3 +121,6 @@ jobs:
 
       - name: Make extract target runs
         run: make extract || true
+
+      - name: Make apply target runs
+        run: make apply THEME=ci-missing-theme || true
