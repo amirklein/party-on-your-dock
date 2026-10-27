@@ -32,6 +32,8 @@ Prefer Dock apps:
 
 ```bash
 ./scripts/poyd dock
+make dock
+make list
 ./scripts/poyd apply <theme> --dock
 ```
 
