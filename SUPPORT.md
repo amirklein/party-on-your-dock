@@ -10,6 +10,7 @@
 6. `./scripts/install-deps.sh` or `make install-deps` — Homebrew fileicon + script permissions
 7. `./scripts/poyd doctor` or `make doctor` — local setup checks
 8. `make list` / `make dock` — list apps before theming
+8b. `make extract` — backup Dock icon renders to `originals/` (local)
 9. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
 10. `./scripts/refresh-dock.sh` or `make refresh` — safe Dock refresh (no bundle edits)
 11. `make revert` — clear custom icons (Dock)
