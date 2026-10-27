@@ -11,7 +11,8 @@
 7. `./scripts/poyd doctor` or `make doctor` — local setup checks
 8. `make list` / `make dock` — list apps before theming
 9. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
-10. `./scripts/refresh-dock.sh` — safe Dock/Finder refresh after apply (no bundle edits)
+10. `./scripts/refresh-dock.sh` or `make refresh` — safe Dock refresh (no bundle edits)
+11. `make revert` — clear custom icons (Dock)
 
 ## Bugs / features
 
