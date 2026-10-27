@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make revert` target (Dock-scoped, CI-safe)
-- [ ] README / FAQ: `make revert` in undo flow
-- [ ] Makefile: help examples for `make refresh` / `make revert`
-- [ ] ARCHITECTURE / CHANGELOG: CI `make refresh` documented
+- [ ] CI smoke: `make extract` target (Dock-scoped)
+- [ ] README / RELEASING: `make extract` and `make revert` smoke
+- [ ] FAQ / SUPPORT: `make list` / `make dock` discovery
+- [ ] themes docs: `make revert` in pack READMEs
 
 ## Shipped
 
@@ -31,6 +31,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #160-169: CI make install-deps, Makefile help themes/version, PR template make version, README/CONTRIBUTING/AGENTS/ARCHITECTURE/RELEASING
 - [x] Batch #179-188: make status/verify CI, list/dock docs, CONTRIBUTING/SUPPORT/RELEASING, themes/example Make workflow
 - [x] Batch #189-196: make refresh CI, RELEASING status/verify/refresh, FAQ/themes README/Makefile/PR template
+- [x] Batch #197-204: make revert CI, README/FAQ revert, Makefile refresh/revert, ARCHITECTURE/CHANGELOG/PR template
 
 ## Non-goals
 
