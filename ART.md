@@ -28,6 +28,7 @@ Validate names before apply:
 make validate THEME=<slug>
 make missing THEME=<slug>
 make preview THEME=<slug>
+make refresh
 ```
 
 See also [`themes/example/`](./themes/example/) for a documented pack scaffold.
