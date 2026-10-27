@@ -118,3 +118,6 @@ jobs:
 
       - name: Make revert target runs
         run: make revert || true
+
+      - name: Make extract target runs
+        run: make extract || true
