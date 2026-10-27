@@ -36,6 +36,8 @@ make install-deps
 make doctor
 make list
 make dock
+make status
+make verify
 make version
 make init-theme NAME="My Theme"
 make themes
