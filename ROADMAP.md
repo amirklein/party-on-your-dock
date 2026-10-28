@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make apply` target (empty theme ok)
-- [ ] RELEASING / SAFETY: `make extract` and `make verify` smoke docs
-- [ ] AGENTS / FAQ: `make apply` after preview in workflow
-- [ ] PR template: `make extract` check
+- [ ] RELEASING / PR template: `make apply` smoke
+- [ ] Makefile / ART: `make coverage` in examples and art docs
+- [ ] themes/README: `make extract` in scaffold block
+- [ ] SAFETY: `make refresh` / `make doctor` in contract
 
 ## Shipped
 
@@ -33,6 +33,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #189-196: make refresh CI, RELEASING status/verify/refresh, FAQ/themes README/Makefile/PR template
 - [x] Batch #197-204: make revert CI, README/FAQ revert, Makefile refresh/revert, ARCHITECTURE/CHANGELOG/PR template
 - [x] Batch #205-218: make extract CI, extract/revert docs, CONTRIBUTING status/verify, FAQ list/dock, themes READMEs
+- [x] Batch #219-234: make apply CI, extract/apply docs, SAFETY/AGENTS/Makefile/FAQ/install-deps
 
 ## Non-goals
 
