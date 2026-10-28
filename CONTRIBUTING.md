@@ -34,6 +34,7 @@ Prefer small PRs:
 ```bash
 make install-deps
 make doctor
+make extract
 make list
 make dock
 make status
