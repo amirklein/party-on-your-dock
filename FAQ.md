@@ -45,6 +45,7 @@ make list
 ./scripts/poyd revert --dry-run --dock
 make preview THEME=<theme>
 make preview-revert
+make apply THEME=<theme>
 ```
 
 ## How do I undo a theme?
