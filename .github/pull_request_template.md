@@ -22,6 +22,7 @@
 - [ ] I tested `make version` (if CLI/Make changed)
 - [ ] I tested `make validate THEME=example` (if theme PNGs changed) || true
 - [ ] I tested `make preview THEME=example` (or `--dry-run`) when touching apply flow
+- [ ] I tested `make apply THEME=example` (if apply changed) || true
 
 ## Test Plan
 - [ ] 
