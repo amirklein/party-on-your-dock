@@ -9,7 +9,7 @@ require-name = $(if $(NAME),,$(error NAME is required, e.g. make init-theme NAME
 help:
 	@echo "Make targets: dock list themes status verify extract doctor version install-deps missing validate coverage init-theme apply revert refresh preview preview-revert"
 	@echo "Theme-scoped targets need THEME=<slug> (init-theme uses NAME="..."; others use THEME=<slug>)"
-	@echo "Examples: make extract | make missing THEME=n64 | make preview THEME=n64 | make apply THEME=n64 | make revert | make init-theme NAME="Nintendo 64""
+	@echo "Examples: make extract | make missing THEME=n64 | make coverage THEME=n64 | make preview THEME=n64 | make apply THEME=n64 | make revert | make init-theme NAME="Nintendo 64""
 	@$(POYD) help
 
 dock:
