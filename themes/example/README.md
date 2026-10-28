@@ -3,6 +3,7 @@
 Documented **example theme pack** — no bundled PNGs. Copy this folder as a starting point:
 
 ```bash
+make extract   # optional: refresh originals/ references
 make init-theme NAME="My Theme"
 # or: cp -R themes/example themes/my-theme
 # generate logo-only transparent PNGs named like ./scripts/poyd dock apps
