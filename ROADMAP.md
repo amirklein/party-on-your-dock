@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: `make extract` target (Dock-scoped)
-- [ ] README / RELEASING: `make extract` and `make revert` smoke
-- [ ] FAQ / SUPPORT: `make list` / `make dock` discovery
-- [ ] themes docs: `make revert` in pack READMEs
+- [ ] CI smoke: `make apply` target (empty theme ok)
+- [ ] RELEASING / SAFETY: `make extract` and `make verify` smoke docs
+- [ ] AGENTS / FAQ: `make apply` after preview in workflow
+- [ ] PR template: `make extract` check
 
 ## Shipped
 
@@ -32,6 +32,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #179-188: make status/verify CI, list/dock docs, CONTRIBUTING/SUPPORT/RELEASING, themes/example Make workflow
 - [x] Batch #189-196: make refresh CI, RELEASING status/verify/refresh, FAQ/themes README/Makefile/PR template
 - [x] Batch #197-204: make revert CI, README/FAQ revert, Makefile refresh/revert, ARCHITECTURE/CHANGELOG/PR template
+- [x] Batch #205-218: make extract CI, extract/revert docs, CONTRIBUTING status/verify, FAQ list/dock, themes READMEs
 
 ## Non-goals
 
