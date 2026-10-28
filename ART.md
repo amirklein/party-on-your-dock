@@ -27,6 +27,7 @@ Validate names before apply:
 ./scripts/poyd missing <slug> --dock
 make validate THEME=<slug>
 make missing THEME=<slug>
+make coverage THEME=<slug>
 make preview THEME=<slug>
 make refresh
 make revert
