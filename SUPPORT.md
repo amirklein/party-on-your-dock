@@ -14,6 +14,7 @@
 9. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
 10. `./scripts/refresh-dock.sh` or `make refresh` — safe Dock refresh (no bundle edits)
 11. `make revert` — clear custom icons (Dock)
+12. `make apply THEME=<slug>` — safe custom icons (Dock); preview with `make preview` first
 
 ## Bugs / features
 
