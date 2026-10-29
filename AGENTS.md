@@ -82,12 +82,13 @@ If icons don’t show in the Dock while apps are running: tell the user custom i
 
 ### 6. Confirm
 - Theme slug, applied count, skips/failures.
-- Remind: `./scripts/poyd revert` restores stock icons.
+- Remind: `./scripts/poyd revert` or `make revert` restores stock icons.
 
 ## Revert
 ```bash
 ./scripts/poyd revert
 ./scripts/poyd revert --only Spotify
+make revert
 ```
 This **removes** custom icons (stock icons return). It must not leave substitute “original PNGs” glued on if a full clear is requested — clearing custom icons is the goal.
 
