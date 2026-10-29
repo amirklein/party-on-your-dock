@@ -10,6 +10,7 @@ themes/n64/Spotify.png
 ## Scaffold a pack
 
 ```bash
+make extract   # optional: refresh originals/
 ./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
 make init-theme NAME="Nintendo 64"
 make themes
