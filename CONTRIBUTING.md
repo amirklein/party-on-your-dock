@@ -61,6 +61,9 @@ Before applying or committing a theme pack:
 ```bash
 ./scripts/poyd missing <slug> --dock
 ./scripts/validate-theme.sh <slug>
+make missing THEME=<slug>
+make validate THEME=<slug>
+make coverage THEME=<slug>
 ```
 
 Fix unknown PNG filenames (must match `./scripts/poyd list`) and generate missing icons.
