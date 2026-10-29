@@ -25,7 +25,7 @@ Never patch files inside `.app/Contents`.
 
 ## Why did an app say it was “damaged and can’t be opened”?
 
-That usually means the app bundle was modified or ad-hoc re-signed. This project forbids that. Use `./scripts/poyd revert` for custom icons only, and reinstall the app from the vendor if the signature is already broken.
+That usually means the app bundle was modified or ad-hoc re-signed. This project forbids that. Use `./scripts/poyd revert` or `make revert` for custom icons only; run `make verify` to check signatures, and reinstall the app from the vendor if the signature is already broken.
 
 ## Which apps get themed by default?
 
