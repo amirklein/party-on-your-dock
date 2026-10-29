@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] RELEASING / PR template: `make apply` smoke
-- [ ] Makefile / ART: `make coverage` in examples and art docs
-- [ ] themes/README: `make extract` in scaffold block
-- [ ] SAFETY: `make refresh` / `make doctor` in contract
+- [ ] CI smoke: chmod shell completion scripts
+- [ ] README / CONTRIBUTING: `make missing` and `make validate` in quick paths
+- [ ] PR template / SUPPORT: `make coverage` checks
+- [ ] SECURITY: document `make verify` for signing checks
 
 ## Shipped
 
@@ -34,6 +34,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #197-204: make revert CI, README/FAQ revert, Makefile refresh/revert, ARCHITECTURE/CHANGELOG/PR template
 - [x] Batch #205-218: make extract CI, extract/revert docs, CONTRIBUTING status/verify, FAQ list/dock, themes READMEs
 - [x] Batch #219-234: make apply CI, extract/apply docs, SAFETY/AGENTS/Makefile/FAQ/install-deps
+- [x] Batch #235-245: apply/coverage docs, SAFETY refresh/doctor, themes/README extract, RELEASING/PR template apply
 
 ## Non-goals
 
