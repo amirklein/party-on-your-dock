@@ -34,6 +34,8 @@ make doctor
 make version
 make themes
 make verify
+make missing THEME=n64
+make validate THEME=n64
 make apply THEME=n64
 make coverage THEME=n64
 make refresh
