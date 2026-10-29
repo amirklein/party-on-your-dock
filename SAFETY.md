@@ -15,8 +15,9 @@ Incident (Aug 2026): replacing `Contents/Resources/*.icns` and running `codesign
 
 - [`AGENTS.md`](./AGENTS.md) hard rules — agents must refuse bundle surgery.
 - [`.cursor/rules/party-on-your-dock.mdc`](./.cursor/rules/party-on-your-dock.mdc) — always-on Cursor rule.
+- `./scripts/poyd doctor` / `make doctor` — local setup checks before apply
 - `./scripts/poyd apply` — custom icons only; rolls back if `codesign --verify` flips from valid → invalid.
 - `./scripts/poyd verify` — report apps with broken signatures (`make verify`).
 - `./scripts/poyd revert` — clears custom icons only (`make revert`) (does **not** re-glue `originals/*.png`).
 
-If the Dock still shows stock icons while apps are running, quit the app, then run `./scripts/refresh-dock.sh` (safe cache clear + Dock/Finder restart) — **do not** escalate to bundle edits.
+If the Dock still shows stock icons while apps are running, quit the app, then run `./scripts/refresh-dock.sh` or `make refresh` (safe cache clear + Dock/Finder restart) — **do not** escalate to bundle edits.
