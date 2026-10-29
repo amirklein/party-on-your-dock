@@ -23,3 +23,5 @@ Include:
 - Never ad-hoc re-sign apps (`codesign --sign -`)
 
 If you find a path in the CLI or docs that suggests violating these constraints, please report it.
+
+After theming, `./scripts/poyd verify --dock` or `make verify` can flag broken signatures.
