@@ -13,8 +13,9 @@ Read [`SAFETY.md`](./SAFETY.md) and the hard rules in [`AGENTS.md`](./AGENTS.md)
 ## Local setup
 
 ```bash
-./scripts/install-deps.sh
-./scripts/poyd help
+make install-deps
+# or: ./scripts/install-deps.sh
+make help
 ./scripts/poyd doctor
 ```
 
