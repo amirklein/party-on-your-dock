@@ -49,7 +49,7 @@ Clears icon caches and restarts Dock/Finder only — never writes inside `.app/C
 
 ## Shell completion
 
-Optional tab completion for bash, zsh, and fish — source the matching file under `scripts/` (see [`CONTRIBUTING.md`](./CONTRIBUTING.md)). Bash, zsh, and fish completion also suggest `--dock`, `--dry-run`, and `--only` for `apply` / `revert`.
+Optional tab completion for bash, zsh, and fish — source the matching file under `scripts/` (`make install-deps` chmods them; CI smoke chmods them too). See [`CONTRIBUTING.md`](./CONTRIBUTING.md). Bash, zsh, and fish completion also suggest `--dock`, `--dry-run`, and `--only` for `apply` / `revert`.
 
 ## Make shortcuts
 
