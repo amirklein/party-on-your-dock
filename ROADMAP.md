@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CI smoke: chmod shell completion scripts
-- [ ] README / CONTRIBUTING: `make missing` and `make validate` in quick paths
-- [ ] PR template / SUPPORT: `make coverage` checks
-- [ ] SECURITY: document `make verify` for signing checks
+- [ ] FAQ / PR template: `make missing` in coverage checks
+- [ ] CONTRIBUTING: `make help` in before-you-PR checklist
+- [ ] SUPPORT / ARCHITECTURE: shell completion discoverability
+- [ ] CHANGELOG: note CI chmod for completion scripts
 
 ## Shipped
 
@@ -35,6 +35,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #205-218: make extract CI, extract/revert docs, CONTRIBUTING status/verify, FAQ list/dock, themes READMEs
 - [x] Batch #219-234: make apply CI, extract/apply docs, SAFETY/AGENTS/Makefile/FAQ/install-deps
 - [x] Batch #235-245: apply/coverage docs, SAFETY refresh/doctor, themes/README extract, RELEASING/PR template apply
+- [x] Batch #246-258: missing/validate README, CONTRIBUTING validation/setup, coverage PR template/SUPPORT, SECURITY verify, CI completion chmod
 
 ## Non-goals
 
