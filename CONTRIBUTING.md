@@ -74,6 +74,7 @@ Before cutting a release, see [`RELEASING.md`](./RELEASING.md) for smoke checks.
 ## Before you open a PR
 
 - [ ] `./scripts/poyd help` still runs
+- [ ] `make help` and `make doctor` still run
 - [ ] You did not write under any `*.app/Contents/`
 - [ ] Docs mention new commands if you added any
 - [ ] Branch name is descriptive (`cursor/...` is fine)
