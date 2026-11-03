@@ -84,6 +84,8 @@ If an agent generates icons, keep PNGs under `themes/<slug>/` (see [`themes/exam
 
 ## Shell completion
 
+Run `make install-deps` first (chmod completion scripts).
+
 ```bash
 source ./scripts/poyd.bash   # bash
 source ./scripts/poyd.zsh   # zsh
