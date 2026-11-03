@@ -14,6 +14,9 @@ jobs:
       - name: Make CLI executable
         run: chmod +x scripts/poyd scripts/poyd.swift scripts/validate-theme.sh scripts/theme-coverage.sh scripts/refresh-dock.sh scripts/install-deps.sh scripts/poyd.bash scripts/poyd.zsh scripts/poyd.fish
 
+      - name: Completion scripts executable
+        run: test -x scripts/poyd.bash && test -x scripts/poyd.zsh && test -x scripts/poyd.fish
+
       - name: Install fileicon
         run: brew install fileicon
 
