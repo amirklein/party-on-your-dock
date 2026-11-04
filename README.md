@@ -69,7 +69,7 @@ Shell completion (optional): see [`CONTRIBUTING.md`](./CONTRIBUTING.md#shell-com
 
 ## Safety
 
-`./scripts/poyd verify` checks code signatures. Apply/revert never modify files inside `.app/Contents`.
+`./scripts/poyd verify` / `make verify` check code signatures. Apply/revert never modify files inside `.app/Contents`.
 
 ## Changelog
 
