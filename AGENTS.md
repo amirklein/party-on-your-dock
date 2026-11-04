@@ -60,6 +60,9 @@ For each target app:
 ```bash
 ./scripts/poyd missing <slug> --dock
 ./scripts/validate-theme.sh <slug>
+make missing THEME=<slug>
+make validate THEME=<slug>
+make coverage THEME=<slug>
 ```
 Fix any `unknown` PNG names or missing Dock apps before applying.
 
