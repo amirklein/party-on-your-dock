@@ -17,7 +17,7 @@ make themes
 ./scripts/poyd themes                     # list packs + icon counts
 ```
 
-Generate logo-only transparent PNGs with an agent (“change my theme to …”), then validate:
+See [`FAQ.md`](../FAQ.md#how-do-i-check-theme-coverage) for coverage checks. Generate logo-only transparent PNGs with an agent (“change my theme to …”), then validate:
 
 ```bash
 ./scripts/poyd missing n64 --dock
