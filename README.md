@@ -65,7 +65,7 @@ Common questions: [`FAQ.md`](./FAQ.md).
 - [`fileicon`](https://github.com/mklement0/fileicon) (`brew install fileicon`)
 - **App Management** permission for your agent app (System Settings → Privacy & Security)
 
-Shell completion (optional): see [`CONTRIBUTING.md`](./CONTRIBUTING.md#shell-completion).
+Shell completion (optional): run `make install-deps`, then see [`CONTRIBUTING.md`](./CONTRIBUTING.md#shell-completion) to `source` bash/zsh/fish scripts.
 
 ## Safety
 
