@@ -83,6 +83,8 @@ Generate missing PNGs before apply. See [`themes/example/`](./themes/example/) f
 ./scripts/poyd init-theme "My Theme"   # → themes/my-theme/
 make init-theme NAME="My Theme"
 make themes
+make missing THEME=my-theme
+make validate THEME=my-theme
 ```
 
 See [`themes/example/`](./themes/example/) and [`themes/README.md`](./themes/README.md).
