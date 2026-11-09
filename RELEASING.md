@@ -32,6 +32,7 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    make validate THEME=example || true
    make apply THEME=example || true
    make verify || true
+   # optional: source ./scripts/poyd.bash (see CONTRIBUTING#shell-completion)
    ```
 4. Open a PR; confirm CI smoke is green
 5. Merge to `main`
