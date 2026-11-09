@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] PR template: `make preview-revert` check
-- [ ] FAQ scaffold: `make missing` / `make validate` shortcuts
-- [ ] install-deps: hint shell completion scripts
-- [ ] ARCHITECTURE / CHANGELOG: CI completion executable test
+- [ ] RELEASING / CONTRIBUTING: optional completion + `make preview-revert` smoke
+- [ ] themes/example: Make steps in workflow blocks
+- [ ] install-deps: completion script hint in Next echo
+- [ ] AGENTS / ART: dry-run revert reminders
 
 ## Shipped
 
@@ -37,6 +37,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #235-245: apply/coverage docs, SAFETY refresh/doctor, themes/README extract, RELEASING/PR template apply
 - [x] Batch #246-258: missing/validate README, CONTRIBUTING validation/setup, coverage PR template/SUPPORT, SECURITY verify, CI completion chmod
 - [x] Batch #259-273: FAQ missing, PR template missing, CONTRIBUTING make help, SUPPORT/ARCHITECTURE completion, validate AGENTS, CI completion test
+- [x] Batch #274-279: preview-revert PR template, FAQ scaffold validate, ARCHITECTURE CI completion, README completion hint
 
 ## Non-goals
 
