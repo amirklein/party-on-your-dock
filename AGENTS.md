@@ -85,7 +85,7 @@ If icons don’t show in the Dock while apps are running: tell the user custom i
 
 ### 6. Confirm
 - Theme slug, applied count, skips/failures.
-- Remind: `./scripts/poyd revert` or `make revert` restores stock icons.
+- Remind: `./scripts/poyd revert` or `make revert` restores stock icons; dry-run with `make preview-revert` first if unsure.
 
 ## Revert
 ```bash
