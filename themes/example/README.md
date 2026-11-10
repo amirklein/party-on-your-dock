@@ -13,6 +13,7 @@ Workflow:
 
 ```bash
 ./scripts/poyd missing my-theme --dock
+# Or: make missing THEME=my-theme && make validate THEME=my-theme && make preview THEME=my-theme
 ./scripts/validate-theme.sh my-theme
 ./scripts/theme-coverage.sh my-theme --dock
 ./scripts/poyd apply my-theme --dock --dry-run
