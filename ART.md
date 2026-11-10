@@ -29,6 +29,7 @@ make validate THEME=<slug>
 make missing THEME=<slug>
 make coverage THEME=<slug>
 make preview THEME=<slug>
+make preview-revert
 make refresh
 make revert
 ```
