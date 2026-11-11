@@ -16,7 +16,7 @@
 11. `make revert` — clear custom icons (Dock)
 12. `make coverage THEME=<slug>` — Dock coverage before apply
 13. [`CONTRIBUTING.md` — shell completion](./CONTRIBUTING.md#shell-completion) (optional bash/zsh/fish)
-14. `make apply THEME=<slug>` — safe custom icons (Dock); preview with `make preview` first
+14. `make apply THEME=<slug>` — safe custom icons (Dock); preview with `make preview` / `make preview-revert` first
 
 ## Bugs / features
 
