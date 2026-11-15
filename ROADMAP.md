@@ -4,10 +4,10 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] RELEASING / CONTRIBUTING: optional completion + `make preview-revert` smoke
-- [ ] themes/example: Make steps in workflow blocks
-- [ ] install-deps: completion script hint in Next echo
-- [ ] AGENTS / ART: dry-run revert reminders
+- [ ] SAFETY / SUPPORT: `make preview` and `make preview-revert` in safety docs
+- [ ] ROADMAP / CHANGELOG: keep batch notes in sync after merges
+- [ ] Makefile: document `make init-theme` NAME guard in help text
+- [ ] FAQ: link AGENTS playbook for theme prompts
 
 ## Shipped
 
@@ -38,6 +38,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #246-258: missing/validate README, CONTRIBUTING validation/setup, coverage PR template/SUPPORT, SECURITY verify, CI completion chmod
 - [x] Batch #259-273: FAQ missing, PR template missing, CONTRIBUTING make help, SUPPORT/ARCHITECTURE completion, validate AGENTS, CI completion test
 - [x] Batch #274-279: preview-revert PR template, FAQ scaffold validate, ARCHITECTURE CI completion, README completion hint
+- [x] Batch #280-287: RELEASING/CONTRIBUTING/AGENTS/ART preview-revert, themes/example Make, install-deps completion echo
 
 ## Non-goals
 
