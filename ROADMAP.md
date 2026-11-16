@@ -4,10 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] SAFETY / SUPPORT: `make preview` and `make preview-revert` in safety docs
-- [ ] ROADMAP / CHANGELOG: keep batch notes in sync after merges
-- [ ] Makefile: document `make init-theme` NAME guard in help text
-- [ ] FAQ: link AGENTS playbook for theme prompts
+- [ ] CHANGELOG: batch #288-293 (ROADMAP ship, SAFETY/SUPPORT preview, FAQ AGENTS, Makefile guards)
+- [ ] README: point new users at FAQ + AGENTS for prompts
+- [ ] RELEASING: mention `make help` guards smoke
 
 ## Shipped
 
@@ -39,6 +38,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #259-273: FAQ missing, PR template missing, CONTRIBUTING make help, SUPPORT/ARCHITECTURE completion, validate AGENTS, CI completion test
 - [x] Batch #274-279: preview-revert PR template, FAQ scaffold validate, ARCHITECTURE CI completion, README completion hint
 - [x] Batch #280-287: RELEASING/CONTRIBUTING/AGENTS/ART preview-revert, themes/example Make, install-deps completion echo
+- [x] Batch #288-293: ROADMAP #288-291, FAQ AGENTS link, Makefile THEME/NAME help guards
 
 ## Non-goals
 
