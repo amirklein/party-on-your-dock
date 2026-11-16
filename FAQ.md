@@ -87,4 +87,4 @@ make missing THEME=my-theme
 make validate THEME=my-theme
 ```
 
-See [`themes/example/`](./themes/example/) and [`themes/README.md`](./themes/README.md).
+See [`themes/example/`](./themes/example/) and [`themes/README.md`](./themes/README.md). For agent-driven prompts (“change my theme to …”), see [`AGENTS.md`](./AGENTS.md).
