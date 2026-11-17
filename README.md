@@ -56,7 +56,7 @@ Want to contribute? See [`CONTRIBUTING.md`](./CONTRIBUTING.md). Release checklis
 
 Example theme scaffold: [`themes/example/`](./themes/example/).
 
-Common questions: [`FAQ.md`](./FAQ.md).
+Common questions: [`FAQ.md`](./FAQ.md). Theme prompts with agents: [`AGENTS.md`](./AGENTS.md).
 
 ## Requirements
 
