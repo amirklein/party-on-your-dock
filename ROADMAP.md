@@ -4,9 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CONTRIBUTING: mention Makefile THEME/NAME guards in Make workflow intro
-- [ ] AGENTS: link FAQ from validate step
-- [ ] ARCHITECTURE: mention `make help` guard line
+- [ ] PR template: note `make help` when Makefile changes
+- [ ] FAQ: link coverage section from AGENTS validate step
+- [ ] SUPPORT: `make help` self-serve entry
 
 ## Shipped
 
@@ -40,6 +40,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #280-287: RELEASING/CONTRIBUTING/AGENTS/ART preview-revert, themes/example Make, install-deps completion echo
 - [x] Batch #288-293: ROADMAP #288-291, FAQ AGENTS link, Makefile THEME/NAME help guards
 - [x] Batch follow-up: CHANGELOG #288-293, README FAQ/AGENTS, RELEASING make help guards
+- [x] Batch #295-298: CHANGELOG/README/RELEASING/ROADMAP follow-up for #288-293
 
 ## Non-goals
 
