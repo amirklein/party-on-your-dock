@@ -32,6 +32,8 @@ Prefer small PRs:
 
 ## Make workflow
 
+Run `make help` to see THEME=`/`NAME=` guard messages before scoped targets.
+
 ```bash
 make install-deps
 make doctor
