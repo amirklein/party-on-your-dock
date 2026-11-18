@@ -9,6 +9,7 @@
 5. [`CONTRIBUTING.md`](./CONTRIBUTING.md#make-workflow) — Make workflow for theme packs (`make themes` lists packs)
 6. `./scripts/install-deps.sh` or `make install-deps` — Homebrew fileicon + script permissions
 7. `./scripts/poyd doctor` or `make doctor` — local setup checks
+7b. `make help` — CLI + Make target list with THEME/NAME guard hints
 8. `make list` / `make dock` — list apps before theming
 8b. `make extract` — backup Dock icon renders to `originals/` (local)
 9. [`RELEASING.md`](./RELEASING.md) — release smoke checklist
