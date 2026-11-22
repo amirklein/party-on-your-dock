@@ -64,7 +64,7 @@ make missing THEME=<slug>
 make validate THEME=<slug>
 make coverage THEME=<slug>
 ```
-Fix any `unknown` PNG names or missing Dock apps before applying.
+Fix any `unknown` PNG names or missing Dock apps before applying. See [`FAQ.md`](./FAQ.md#how-do-i-check-theme-coverage).
 
 ### 5. Apply (safe path only)
 Preview first:
