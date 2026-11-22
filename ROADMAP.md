@@ -4,9 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] PR template: note `make help` when Makefile changes
-- [ ] FAQ: link coverage section from AGENTS validate step
-- [ ] SUPPORT: `make help` self-serve entry
+- [ ] CHANGELOG: batch #299-304
+- [ ] README: `make help` in quick start for new contributors
+- [ ] install-deps: mention guard hints in Next echo
 
 ## Shipped
 
@@ -41,6 +41,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #288-293: ROADMAP #288-291, FAQ AGENTS link, Makefile THEME/NAME help guards
 - [x] Batch follow-up: CHANGELOG #288-293, README FAQ/AGENTS, RELEASING make help guards
 - [x] Batch #295-298: CHANGELOG/README/RELEASING/ROADMAP follow-up for #288-293
+- [x] Batch #299-304: CONTRIBUTING/AGENTS/ARCHITECTURE/SUPPORT make-help guards
 
 ## Non-goals
 
