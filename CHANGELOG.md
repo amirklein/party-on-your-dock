@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Docs: FAQ, SUPPORT, ROADMAP, RELEASING, CONTRIBUTING, CODE_OF_CONDUCT, ART.md, ARCHITECTURE.md; AGENTS Make shortcuts table; CONTRIBUTING Make workflow
 - Example theme scaffold: `themes/example/`
 - CI: macOS smoke (help, themes, doctor, status, version, missing, validate, dry-run, coverage, refresh-dock, make preview, make preview-revert, make help, make coverage, make doctor, make missing, make init-theme, install-deps, make version, make themes, make list, make dock, make status, make verify, make refresh, make revert, make extract, make apply)
+- Docs/CI batch #299-304: CONTRIBUTING/AGENTS/ARCHITECTURE/SUPPORT make-help and THEME/NAME guards
 - Docs/CI batch #295-298: CHANGELOG/README/RELEASING/ROADMAP follow-up for doc batch
 - Docs/CI batch #288-293: ROADMAP ship, SAFETY/SUPPORT preview docs, FAQ AGENTS link, Makefile THEME/NAME help guards
 - Docs/CI batch #280-287: preview-revert docs, RELEASING completion, install-deps echo, themes/example workflow
