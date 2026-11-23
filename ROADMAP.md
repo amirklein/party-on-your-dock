@@ -4,9 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CHANGELOG: batch #299-304
-- [ ] README: `make help` in quick start for new contributors
-- [ ] install-deps: mention guard hints in Next echo
+- [ ] CHANGELOG: batch #305-307
+- [ ] CI: smoke `make help` output includes guard line
+- [ ] RELEASING: mention `make help` in local verify
 
 ## Shipped
 
@@ -42,6 +42,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch follow-up: CHANGELOG #288-293, README FAQ/AGENTS, RELEASING make help guards
 - [x] Batch #295-298: CHANGELOG/README/RELEASING/ROADMAP follow-up for #288-293
 - [x] Batch #299-304: CONTRIBUTING/AGENTS/ARCHITECTURE/SUPPORT make-help guards
+- [x] Batch #305-307: ROADMAP/CHANGELOG ship #299-304, PR template Makefile guard note
 
 ## Non-goals
 
