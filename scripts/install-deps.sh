@@ -21,5 +21,5 @@ chmod +x   "$ROOT/scripts/poyd"   "$ROOT/scripts/poyd.swift"   "$ROOT/scripts/in
   "$ROOT/scripts/poyd.zsh"
 
 echo "ok: scripts marked executable"
-echo "Next: make doctor && make extract && make help"
+echo "Next: make doctor && make extract && make help  # THEME=/NAME= guard hints"
 echo "Shell completion (optional): scripts/poyd.bash — see CONTRIBUTING.md#shell-completion"
