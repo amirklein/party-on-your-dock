@@ -75,7 +75,7 @@ make coverage THEME=<theme>
 make validate THEME=<theme>
 ```
 
-Generate missing PNGs before apply. See [`themes/example/`](./themes/example/) for a documented pack scaffold.
+Generate missing PNGs before apply. Agents: see [`AGENTS.md`](./AGENTS.md#4b-validate-theme-filenames-before-apply) validate step. See [`themes/example/`](./themes/example/) for a documented pack scaffold.
 
 ## How do I scaffold a new theme pack?
 
