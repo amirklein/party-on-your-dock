@@ -8,6 +8,8 @@ Theme your Mac Dock like a costume party. Open this repo in **Cursor**, **Codex*
 
 ## Quick start
 
+New contributors: run `make help` first for THEME/NAME guard hints and target examples.
+
 ```bash
 ./scripts/install-deps.sh              # fileicon + executable scripts
 ./scripts/poyd extract                    # art-reference PNGs → originals/
