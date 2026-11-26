@@ -12,7 +12,7 @@ party-on-your-dock is currently versioned lightly via `./scripts/poyd version`.
    ./scripts/poyd version
    ./scripts/poyd themes
    ./scripts/poyd status --dock
-   make help   # confirms THEME=/NAME= guard messages
+   make help   # confirms THEME=/NAME= guard messages (see README quick start)
    make install-deps
    make extract || true
    make doctor
