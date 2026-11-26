@@ -20,6 +20,8 @@ If the user asks for something that requires breaking rule 1, **refuse** and exp
 
 ## Workflow
 
+Run `make help` (see [README quick start](./README.md#quick-start)) for `THEME`/`NAME` guard hints before theme-scoped Make targets.
+
 ### 1. Normalize the theme slug
 - Lowercase, hyphens, ASCII: `Nintendo 64` → `n64`.
 - Or let the CLI do it:
