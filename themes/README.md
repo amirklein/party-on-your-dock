@@ -9,6 +9,8 @@ themes/n64/Spotify.png
 
 ## Scaffold a pack
 
+Run `make help` from the repo root for `THEME=<slug>` / `NAME="..."` guard messages.
+
 ```bash
 make extract   # optional: refresh originals/
 ./scripts/poyd init-theme "Nintendo 64"   # → themes/n64/
