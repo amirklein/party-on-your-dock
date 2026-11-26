@@ -15,7 +15,7 @@ Read [`SAFETY.md`](./SAFETY.md) and the hard rules in [`AGENTS.md`](./AGENTS.md)
 ```bash
 make install-deps
 # or: ./scripts/install-deps.sh
-make help
+make help  # also at top of README quick start
 ./scripts/poyd doctor
 ```
 
