@@ -4,9 +4,9 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 
 ## Next
 
-- [ ] CHANGELOG: batch #308-311 follow-up (CI guards doc batch)
-- [ ] AGENTS: README make help in workflow intro
-- [ ] themes/README: `make help` for THEME guards
+- [ ] CHANGELOG: batch #313-319 follow-up
+- [ ] themes/example README: `make help` guard hint
+- [ ] FAQ: themes/README make help cross-link
 
 ## Shipped
 
@@ -44,6 +44,7 @@ Near-term ideas for party-on-your-dock. None of these require editing app bundle
 - [x] Batch #299-304: CONTRIBUTING/AGENTS/ARCHITECTURE/SUPPORT make-help guards
 - [x] Batch #305-307: ROADMAP/CHANGELOG ship #299-304, PR template Makefile guard note
 - [x] Batch #308-311: README/install-deps guard echo, FAQ coverage→AGENTS validate
+- [x] Batch #313-319: CI make help Guards grep, README make-help cross-links, ARCHITECTURE note
 
 ## Non-goals
 
